@@ -1,0 +1,22 @@
+{
+	"short_name": "Fun City Games",
+	"name": "Fun City Games NWA",
+	"description": "Arcade game route partner in Northwest Arkansas. We place, service, and share profits on arcade games for your business.",
+	"scope": "/",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#E6007E",
+	"icons": [
+		{
+			"src": "icon-192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "icon-512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	]
+}

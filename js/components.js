@@ -1,0 +1,156 @@
+const NAV_LINKS = [
+	{ href: '/', label: 'Home' },
+	{ href: '/how-it-works.html', label: 'How It Works' },
+	{ href: '/games.html', label: 'Games' },
+	{ href: '/venues.html', label: 'Venues' },
+	{ href: '/locations.html', label: 'Locations' },
+	{ href: '/about.html', label: 'About' },
+];
+
+function currentPath() {
+	let p = window.location.pathname;
+	if (p === '' || p === '/') return '/';
+	return p.replace(/\/index\.html$/, '/');
+}
+
+function activeClass(href) {
+	return currentPath() === href ? 'active' : '';
+}
+
+class SiteHeader extends HTMLElement {
+	connectedCallback() {
+		const navItems = NAV_LINKS.map(
+			(l) => `<li><a href="${l.href}" class="${activeClass(l.href)}">${l.label}</a></li>`
+		).join('');
+
+		const mobileNavItems = NAV_LINKS.map(
+			(l) => `<li class="mobile-menu-li"><a href="${l.href}" class="${activeClass(l.href)}">${l.label}</a></li>`
+		).join('');
+
+		this.innerHTML = `
+			<a href="#main-content" class="skip-link">Skip to main content</a>
+			<header>
+				<div id="headerContent">
+					<a href="/" aria-label="Fun City Games home">
+						<img class="header-logo" src="/images/logo.svg" alt="Fun City Games" width="260" height="70">
+					</a>
+
+					<button class="hamburger-icon" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu-container">
+						<div class="bar1"></div>
+						<div class="bar2"></div>
+						<div class="bar3"></div>
+					</button>
+
+					<div class="desktop-menu">
+						<nav aria-label="Primary">
+							<ul>
+								${navItems}
+								<li class="nav-cta"><a href="/contact.html" class="btn btn-magenta">Partner With Us</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="mobile-menu-container" id="mobile-menu-container" aria-hidden="true">
+						<button class="mobile-menu-outside" aria-label="Close navigation menu" tabindex="-1"></button>
+						<div class="mobile-menu" id="mobile-menu">
+							<nav class="mobile-menu-nav" aria-label="Mobile">
+								<ul>
+									${mobileNavItems}
+									<li class="mobile-menu-cta"><a href="/contact.html" class="btn btn-magenta">Partner With Us</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</header>
+		`;
+
+		const headerContent = this.querySelector('#headerContent');
+		const hamburger = this.querySelector('.hamburger-icon');
+		const menuContainer = this.querySelector('#mobile-menu-container');
+		const outsideButton = this.querySelector('.mobile-menu-outside');
+
+		const openMenu = () => {
+			hamburger.setAttribute('aria-expanded', 'true');
+			menuContainer.setAttribute('aria-hidden', 'false');
+			headerContent.classList.add('hamburger-icon-click');
+			document.body.style.overflow = 'hidden';
+			const firstLink = this.querySelector('.mobile-menu-nav a');
+			if (firstLink) firstLink.focus();
+		};
+
+		const closeMenu = () => {
+			hamburger.setAttribute('aria-expanded', 'false');
+			menuContainer.setAttribute('aria-hidden', 'true');
+			headerContent.classList.remove('hamburger-icon-click');
+			document.body.style.overflow = '';
+			hamburger.focus();
+		};
+
+		hamburger.addEventListener('click', () => {
+			const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+			if (isOpen) closeMenu();
+			else openMenu();
+		});
+
+		outsideButton.addEventListener('click', closeMenu);
+
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape' && hamburger.getAttribute('aria-expanded') === 'true') {
+				closeMenu();
+			}
+		});
+	}
+}
+
+class SiteFooter extends HTMLElement {
+	connectedCallback() {
+		const year = new Date().getFullYear();
+		this.innerHTML = `
+			<footer>
+				<div class="footer-container">
+					<div class="footer-brand">
+						<a href="/"><img src="/images/logo.svg" alt="Fun City Games" width="180" height="48"></a>
+						<p>Arcade game route partner serving Northwest Arkansas — at zero cost to your business.</p>
+					</div>
+					<div class="footer-col">
+						<h4>Explore</h4>
+						<ul>
+							<li><a href="/how-it-works.html">How It Works</a></li>
+							<li><a href="/games.html">Our Games</a></li>
+							<li><a href="/venues.html">Venues We Partner With</a></li>
+							<li><a href="/locations.html">Service Areas</a></li>
+							<li><a href="/about.html">About</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h4>Contact</h4>
+						<ul>
+							<li><a href="tel:+18776242637">(877) 62-GAMES</a></li>
+							<li><a href="mailto:info@funcitygamesnwa.com">info@funcitygamesnwa.com</a></li>
+							<li><a href="/contact.html">Request a Consultation</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h4>Service Areas</h4>
+						<ul>
+							<li>Fayetteville, AR</li>
+							<li>Rogers, AR</li>
+							<li>Bentonville, AR</li>
+							<li>Springdale, AR</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div>&copy; ${year} Fun City Games. All rights reserved.</div>
+					<a href="https://www.loganrdavis.com" rel="noopener noreferrer" aria-label="Built by Logan R. Davis">
+						<img src="/images/lrd-tag.svg" alt="www.loganrdavis.com" width="150" height="75">
+					</a>
+				</div>
+			</footer>
+		`;
+	}
+}
+
+customElements.define('site-header', SiteHeader);
+customElements.define('site-footer', SiteFooter);
