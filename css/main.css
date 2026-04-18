@@ -292,8 +292,7 @@ header nav a.active {
   transition: width 0.25s;
 }
 
-.hamburger-icon-click + .mobile-menu-container,
-.hamburger-icon-click .mobile-menu-container { opacity: 1; height: auto; overflow: visible; }
+.hamburger-icon-click .mobile-menu-container { opacity: 1; height: auto; width: auto; overflow: visible; }
 .hamburger-icon-click .mobile-menu { width: min(320px, 80%); }
 .hamburger-icon-click .mobile-menu-outside { width: 100%; }
 
