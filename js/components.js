@@ -121,7 +121,7 @@ class SiteFooter extends HTMLElement {
 								<img src="/images/logo-horizontal-256.png" srcset="/images/logo-horizontal-256.png 1x, /images/logo-horizontal-512.png 2x" alt="Fun City Games" width="180" height="90" loading="lazy" decoding="async">
 							</picture>
 						</a>
-						<p>Arcade game route partner serving Northwest Arkansas — at zero cost to your business.</p>
+						<p>Arcade game route partner serving Northwest Arkansas at zero cost to your business.</p>
 					</div>
 					<div class="footer-col">
 						<h4>Explore</h4>

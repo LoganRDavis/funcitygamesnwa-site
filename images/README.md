@@ -14,7 +14,6 @@ The HTML templates reference these paths. Drop matching files here and the site 
 | `images/claw-machine.webp` | Home, Games | Photo of a claw machine (ideally one of ours on location). |
 | `images/video-games.webp` | Home, Games | Photo of arcade cabinets. |
 | `images/bulk-vending.webp` | Home, Games | Photo of bulk vending machines. |
-| `images/team-working.webp` | About | Photo of the team servicing or installing machines. |
 | `images/lrd-tag.svg` | Footer | Built-by-LRD tag — copy from `ssnwa-site/images/lrd-tag.svg`. |
 
 ## Nice-to-have (not yet referenced)
