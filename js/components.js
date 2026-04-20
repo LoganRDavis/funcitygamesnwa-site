@@ -5,6 +5,7 @@ const NAV_LINKS = [
 	{ href: '/venues.html', label: 'Venues' },
 	{ href: '/locations.html', label: 'Locations' },
 	{ href: '/about.html', label: 'About' },
+	{ href: '/contact.html', label: 'Contact' },
 ];
 
 function currentPath() {
@@ -34,7 +35,7 @@ class SiteHeader extends HTMLElement {
 					<a href="/" aria-label="Fun City Games home">
 						<picture>
 							<source type="image/webp" srcset="/images/logo-horizontal-256.webp 1x, /images/logo-horizontal-512.webp 2x">
-							<img class="header-logo" src="/images/logo-horizontal-256.png" srcset="/images/logo-horizontal-256.png 1x, /images/logo-horizontal-512.png 2x" alt="Fun City Games" width="198" height="70">
+							<img class="header-logo" src="/images/logo-horizontal-256.png" srcset="/images/logo-horizontal-256.png 1x, /images/logo-horizontal-512.png 2x" alt="Fun City Games" width="141" height="70">
 						</picture>
 					</a>
 
@@ -117,7 +118,7 @@ class SiteFooter extends HTMLElement {
 						<a href="/">
 							<picture>
 								<source type="image/webp" srcset="/images/logo-horizontal-256.webp 1x, /images/logo-horizontal-512.webp 2x">
-								<img src="/images/logo-horizontal-256.png" srcset="/images/logo-horizontal-256.png 1x, /images/logo-horizontal-512.png 2x" alt="Fun City Games" width="180" height="64">
+								<img src="/images/logo-horizontal-256.png" srcset="/images/logo-horizontal-256.png 1x, /images/logo-horizontal-512.png 2x" alt="Fun City Games" width="180" height="90">
 							</picture>
 						</a>
 						<p>Arcade game route partner serving Northwest Arkansas — at zero cost to your business.</p>
