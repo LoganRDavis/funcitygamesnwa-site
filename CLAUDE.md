@@ -20,7 +20,7 @@ Each page is a fully self-contained HTML file — there is no template engine. T
 3. Add extensionless + trailing-slash aliases to `_redirects` (matches the canonical pattern used for every other page — the `.html` URL is the canonical, and `/foo` / `/foo/` 301 to it).
 4. If the page should appear in primary nav, add it to `NAV_LINKS` in `js/components.js`.
 
-`LocalBusiness` JSON-LD lives only on pages where it's contextually appropriate (currently `index.html` and `locations.html`) — not every page. If you add it to a new page, keep the core fields (name, URL, telephone, address, areaServed) consistent with those two.
+`Organization` JSON-LD (with `@id: https://www.funcitygamesnwa.com/#organization` and `areaServed` listing the four NWA cities) lives on `index.html` and `locations.html`. Fun City Games is a service-area business with no public storefront, so we intentionally avoid `LocalBusiness` schema — that type requires a full `address` to qualify for Google rich results. Other pages use page-specific schema (`AboutPage`, `ContactPage`, `ItemList`, `FAQPage`, `Service`) that references the shared Organization via its `@id`. If you add schema to a new page, keep `name`, `url`, `telephone` (`+18776242637`), and `email` consistent.
 
 `404.html` is standalone — it uses `/css/404.css`, not `main.css`, and does not include `<site-header>`/`<site-footer>`. Edit it directly without touching shared chrome.
 
