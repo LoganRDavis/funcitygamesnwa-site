@@ -1,17 +1,17 @@
 const NAV_LINKS = [
 	{ href: '/', label: 'Home' },
-	{ href: '/how-it-works.html', label: 'How It Works' },
-	{ href: '/games.html', label: 'Games' },
-	{ href: '/venues.html', label: 'Venues' },
-	{ href: '/locations.html', label: 'Locations' },
-	{ href: '/about.html', label: 'About' },
-	{ href: '/contact.html', label: 'Contact' },
+	{ href: '/how-it-works', label: 'How It Works' },
+	{ href: '/games', label: 'Games' },
+	{ href: '/venues', label: 'Venues' },
+	{ href: '/locations', label: 'Locations' },
+	{ href: '/about', label: 'About' },
+	{ href: '/contact', label: 'Contact' },
 ];
 
 function currentPath() {
 	let p = window.location.pathname;
 	if (p === '' || p === '/') return '/';
-	return p.replace(/\/index\.html$/, '/');
+	return p.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
 }
 
 function activeClass(href) {
@@ -61,7 +61,7 @@ class SiteHeader extends HTMLElement {
 							<nav class="mobile-menu-nav" aria-label="Mobile">
 								<ul>
 									${mobileNavItems}
-									<li class="mobile-menu-cta"><a href="/contact.html" class="btn btn-magenta">Partner With Us</a></li>
+									<li class="mobile-menu-cta"><a href="/contact" class="btn btn-magenta">Partner With Us</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -126,11 +126,11 @@ class SiteFooter extends HTMLElement {
 					<div class="footer-col">
 						<h4>Explore</h4>
 						<ul>
-							<li><a href="/how-it-works.html">How It Works</a></li>
-							<li><a href="/games.html">Our Games</a></li>
-							<li><a href="/venues.html">Venues We Partner With</a></li>
-							<li><a href="/locations.html">Service Areas</a></li>
-							<li><a href="/about.html">About</a></li>
+							<li><a href="/how-it-works">How It Works</a></li>
+							<li><a href="/games">Our Games</a></li>
+							<li><a href="/venues">Venues We Partner With</a></li>
+							<li><a href="/locations">Service Areas</a></li>
+							<li><a href="/about">About</a></li>
 						</ul>
 					</div>
 					<div class="footer-col">
@@ -138,7 +138,7 @@ class SiteFooter extends HTMLElement {
 						<ul>
 							<li><a href="tel:+18776242637">(877) 62-GAMES</a></li>
 							<li><a href="mailto:info@funcitygamesnwa.com">info@funcitygamesnwa.com</a></li>
-							<li><a href="/contact.html">Request a Consultation</a></li>
+							<li><a href="/contact">Request a Consultation</a></li>
 						</ul>
 					</div>
 					<div class="footer-col">

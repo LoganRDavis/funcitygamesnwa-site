@@ -15,10 +15,10 @@ Static marketing site for Fun City Games — an arcade game route operator partn
 
 Each page is a fully self-contained HTML file — there is no template engine. To add a page, copy an existing page (e.g. `about.html`) and update:
 
-1. `<title>`, `<meta name="description">`, OG/Twitter tags, and `<link rel="canonical">`.
-2. Add the page to `sitemap.xml`.
-3. Add extensionless + trailing-slash aliases to `_redirects` (matches the canonical pattern used for every other page — the `.html` URL is the canonical, and `/foo` / `/foo/` 301 to it).
-4. If the page should appear in primary nav, add it to `NAV_LINKS` in `js/components.js`.
+1. `<title>`, `<meta name="description">`, OG/Twitter tags, and `<link rel="canonical">`. **Canonicals and all internal `href`s are extensionless** (`/about`, not `/about.html`) — Cloudflare Pages serves `/foo.html` under `/foo` and 308-redirects the `.html` form, so using `.html` URLs in canonicals creates a redirect loop with any reverse rule.
+2. Add the page to `sitemap.xml` with its extensionless URL.
+3. Add a trailing-slash alias to `_redirects` (`/foo/ → /foo 301`). The extensionless URL is served natively by Pages; do **not** add `/foo → /foo.html` rules (they loop against Pages' built-in `.html` stripping).
+4. If the page should appear in primary nav, add it to `NAV_LINKS` in `js/components.js` using the extensionless href.
 
 `Organization` JSON-LD (with `@id: https://www.funcitygamesnwa.com/#organization` and `areaServed` listing the four NWA cities) lives on `index.html` and `locations.html`. Fun City Games is a service-area business with no public storefront, so we intentionally avoid `LocalBusiness` schema — that type requires a full `address` to qualify for Google rich results. Other pages use page-specific schema (`AboutPage`, `ContactPage`, `ItemList`, `FAQPage`, `Service`) that references the shared Organization via its `@id`. If you add schema to a new page, keep `name`, `url`, `telephone` (`+18776242637`), and `email` consistent.
 
