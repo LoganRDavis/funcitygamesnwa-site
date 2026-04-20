@@ -118,7 +118,7 @@ class SiteFooter extends HTMLElement {
 						<a href="/">
 							<picture>
 								<source type="image/webp" srcset="/images/logo-horizontal-256.webp 1x, /images/logo-horizontal-512.webp 2x">
-								<img src="/images/logo-horizontal-256.png" srcset="/images/logo-horizontal-256.png 1x, /images/logo-horizontal-512.png 2x" alt="Fun City Games" width="180" height="90">
+								<img src="/images/logo-horizontal-256.png" srcset="/images/logo-horizontal-256.png 1x, /images/logo-horizontal-512.png 2x" alt="Fun City Games" width="180" height="90" loading="lazy" decoding="async">
 							</picture>
 						</a>
 						<p>Arcade game route partner serving Northwest Arkansas — at zero cost to your business.</p>
@@ -154,7 +154,7 @@ class SiteFooter extends HTMLElement {
 				<div class="footer-bottom">
 					<div>&copy; ${year} Fun City Games. All rights reserved.</div>
 					<a href="https://www.loganrdavis.com" rel="noopener noreferrer" aria-label="Built by Logan R. Davis">
-						<img src="/images/lrd-tag.svg" alt="www.loganrdavis.com" width="150" height="75">
+						<img src="/images/lrd-tag.svg" alt="www.loganrdavis.com" width="150" height="75" loading="lazy" decoding="async">
 					</a>
 				</div>
 			</footer>
