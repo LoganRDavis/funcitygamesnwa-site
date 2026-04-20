@@ -31,17 +31,23 @@
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="apple-touch-icon" href="/icon-192.png">
 	<link rel="preload" as="font" href="/fonts/open-sans-latin.woff2" type="font/woff2" crossorigin>
-	<link rel="stylesheet" href="/css/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap">
+	<link rel="stylesheet" href="/css/main.css?v=20260419n">
 	<script src="/js/components.js" defer></script>
 
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
-		"@type": "LocalBusiness",
+		"@type": "Organization",
+		"@id": "https://www.funcitygamesnwa.com/#organization",
 		"name": "Fun City Games",
-		"description": "Arcade game route operator serving Northwest Arkansas. We place, service, and profit-share arcade machines with local businesses at zero cost.",
+		"description": "Arcade game route operator serving Northwest Arkansas. We place, service, and profit-share arcade, claw, and bulk vending machines with local businesses at zero cost.",
 		"url": "https://www.funcitygamesnwa.com",
-		"telephone": "+1-877-624-2637",
+		"logo": "https://www.funcitygamesnwa.com/images/logo-horizontal-512.png",
+		"image": "https://www.funcitygamesnwa.com/images/og-card.png",
+		"telephone": "+18776242637",
 		"email": "info@funcitygamesnwa.com",
 		"areaServed": [
 			{ "@type": "City", "name": "Fayetteville, AR" },
@@ -49,53 +55,138 @@
 			{ "@type": "City", "name": "Bentonville, AR" },
 			{ "@type": "City", "name": "Springdale, AR" }
 		],
-		"image": "https://www.funcitygamesnwa.com/images/og-card.png"
+		"knowsAbout": ["Arcade route operations", "Claw machines", "Bulk vending", "Video arcade cabinets", "Revenue-share amusement placement"]
 	}
 	</script>
 </head>
 
-<body>
+<body class="theme-modern">
 	<div class="main-container">
 		<site-header></site-header>
 
 		<main id="main-content">
 			<section class="hero">
-				<span class="confetti confetti-star confetti-a confetti-animate" aria-hidden="true"></span>
-				<span class="confetti confetti-triangle confetti-b confetti-animate confetti-lg" aria-hidden="true"></span>
-				<span class="confetti confetti-circle confetti-c confetti-animate confetti-sm" aria-hidden="true"></span>
-				<span class="confetti confetti-burst confetti-d confetti-animate" aria-hidden="true"></span>
-				<span class="confetti confetti-zigzag confetti-e confetti-animate" aria-hidden="true"></span>
-				<span class="confetti confetti-star confetti-f confetti-animate confetti-sm" aria-hidden="true"></span>
+				<span class="hero-blob hero-blob-cyan" aria-hidden="true"></span>
+				<span class="hero-blob hero-blob-magenta" aria-hidden="true"></span>
+				<span class="hero-blob hero-blob-yellow" aria-hidden="true"></span>
+				<span class="hero-sparkle hero-sparkle-1" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="hero-sparkle hero-sparkle-2" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="hero-sparkle hero-sparkle-3" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+						<path d="M12 2v5M12 17v5M2 12h5M17 12h5M4.5 4.5l3.5 3.5M16 16l3.5 3.5M4.5 19.5l3.5-3.5M16 8l3.5-3.5"/>
+					</svg>
+				</span>
 				<div class="hero-inner">
-					<span class="hero-badge">100% Free Placement</span>
-					<h1>Level Up Your Revenue <span class="accent">At Zero Cost</span></h1>
+					<span class="hero-badge">
+						<svg class="hero-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+						100% Free Placement
+					</span>
+					<h1>Level Up<br>Your Revenue<br><span class="accent">At Zero Cost</span></h1>
 					<p>We supply the newest arcade games, you provide the space, and we share the profits. It's that simple — and it's working for businesses all across Northwest Arkansas.</p>
 					<div class="hero-ctas">
 						<a href="/contact.html" class="btn btn-magenta">Partner With Us</a>
-						<a href="tel:+18776242637" class="btn btn-cyan">Call (877) 62-GAMES</a>
+						<a href="tel:+18776242637" class="btn hero-btn-phone">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.6a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.4-1.3a2 2 0 012.1-.5c.8.3 1.7.6 2.6.7a2 2 0 011.7 2z"/>
+							</svg>
+							Call (877) 62-GAMES
+						</a>
 					</div>
+				</div>
+				<div class="hero-product">
+					<picture>
+						<source type="image/webp" srcset="/images/logo-512.webp 1x, /images/logo-1024.webp 2x">
+						<img src="/images/logo-512.png" srcset="/images/logo-512.png 1x, /images/logo-1024.png 2x" alt="Fun City Games mascot and claw machine emblem" width="512" height="519">
+					</picture>
 				</div>
 			</section>
 
-			<div class="wave wave-cream" aria-hidden="true"></div>
+			<div class="hype-strip" aria-hidden="true">
+				<div class="hype-track">
+					<span class="hype-item">100% Free Placement</span>
+					<span class="hype-dot"></span>
+					<span class="hype-item">Zero Upfront Cost</span>
+					<span class="hype-dot"></span>
+					<span class="hype-item">No Contracts</span>
+					<span class="hype-dot"></span>
+					<span class="hype-item">Family Owned in NWA</span>
+					<span class="hype-dot"></span>
+					<span class="hype-item">Newest Equipment</span>
+					<span class="hype-dot"></span>
+					<span class="hype-item">Full Service Included</span>
+					<span class="hype-dot"></span>
+					<span class="hype-item">Profit Sharing Every Pay Period</span>
+					<span class="hype-dot"></span>
+					<span class="hype-item">100% Free Placement</span>
+					<span class="hype-dot"></span>
+					<span class="hype-item">Zero Upfront Cost</span>
+					<span class="hype-dot"></span>
+					<span class="hype-item">No Contracts</span>
+					<span class="hype-dot"></span>
+					<span class="hype-item">Family Owned in NWA</span>
+					<span class="hype-dot"></span>
+					<span class="hype-item">Newest Equipment</span>
+					<span class="hype-dot"></span>
+					<span class="hype-item">Full Service Included</span>
+					<span class="hype-dot"></span>
+					<span class="hype-item">Profit Sharing Every Pay Period</span>
+					<span class="hype-dot"></span>
+				</div>
+			</div>
 
-			<section class="section section-cream">
+			<section class="section section-cream bg-dots section-steps">
+				<span class="section-sticker section-sticker-star-1" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="section-sticker section-sticker-zigzag-1" aria-hidden="true">
+					<svg viewBox="0 0 60 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M3 18l9-12 9 12 9-12 9 12 9-12 9 12"/>
+					</svg>
+				</span>
 				<div class="section-inner">
 					<h2 class="section-title">How It Works</h2>
 					<p class="section-lede">Three simple steps to turn unused floor space into a steady revenue stream — no upfront costs, no hassle.</p>
-					<div class="steps">
+					<div class="steps steps-path">
+						<svg class="steps-trail" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+							<path d="M 80 40 Q 300 -10 600 40 T 1120 40" fill="none" stroke="#FF0F8A" stroke-width="8" stroke-linecap="round" stroke-dasharray="4 20"/>
+						</svg>
 						<div class="step">
-							<div class="step-number">1</div>
+							<div class="step-icon" data-step="1" aria-hidden="true">
+								<svg class="icon-sticker" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+									<rect x="10" y="22" width="44" height="34" rx="3"/>
+									<path d="M10 22l22-14 22 14"/>
+									<path d="M32 22v6"/>
+									<path d="M32 28l-7 6M32 28l7 6"/>
+									<circle cx="25" cy="41" r="3.5" fill="currentColor"/>
+									<circle cx="39" cy="43" r="3" fill="currentColor"/>
+									<circle cx="32" cy="48" r="2.5" fill="currentColor"/>
+								</svg>
+							</div>
 							<h3>We Place the Games</h3>
 							<p>Our team delivers and installs the right mix of arcade, claw, and vending machines for your space — fully set up, ready to play.</p>
 						</div>
 						<div class="step">
-							<div class="step-number">2</div>
+							<div class="step-icon" data-step="2" aria-hidden="true">
+								<svg class="icon-sticker" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M42 8a10 10 0 00-10 14L10 44a4 4 0 005.7 5.7l22-22A10 10 0 0052 18l-7 7-5-1-1-5 7-7a10 10 0 00-4-4z"/>
+									<circle cx="13" cy="47" r="1.8" fill="currentColor"/>
+								</svg>
+							</div>
 							<h3>We Service Everything</h3>
 							<p>We restock prizes, collect cash, and keep every machine running smoothly. You do nothing. Seriously.</p>
 						</div>
 						<div class="step">
-							<div class="step-number">3</div>
+							<div class="step-icon" data-step="3" aria-hidden="true">
+								<svg class="icon-sticker" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+									<circle cx="32" cy="32" r="22"/>
+									<path d="M32 18v28"/>
+									<path d="M38 24h-9a4 4 0 000 8h6a4 4 0 010 8h-10"/>
+								</svg>
+							</div>
 							<h3>We Share the Profits</h3>
 							<p>Each pay period you get a check. Your space works harder, your customers stay longer, your bottom line grows.</p>
 						</div>
@@ -106,26 +197,44 @@
 				</div>
 			</section>
 
-			<div class="wave wave-cyan-light" aria-hidden="true"></div>
-
-			<section class="section section-cyan">
+			<section class="section section-cyan-full section-textured">
+				<span class="section-sticker section-sticker-burst-1" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+						<path d="M12 2v5M12 17v5M2 12h5M17 12h5M4.5 4.5l3.5 3.5M16 16l3.5 3.5M4.5 19.5l3.5-3.5M16 8l3.5-3.5"/>
+					</svg>
+				</span>
+				<span class="section-sticker section-sticker-circle-2" aria-hidden="true"></span>
 				<div class="section-inner" style="position:relative;">
-					<span class="confetti confetti-star confetti-animate" style="top:-20px; left:5%;" aria-hidden="true"></span>
-					<span class="confetti confetti-burst confetti-animate confetti-sm" style="top:10px; right:7%;" aria-hidden="true"></span>
 					<h2 class="section-title">Why Partner With Fun City Games?</h2>
 					<div class="feature-grid">
 						<div class="feature">
-							<div class="feature-icon" aria-hidden="true">&#127919;</div>
+							<div class="feature-icon" aria-hidden="true">
+								<svg class="icon-sticker" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M32 6l5.6 13 14.4 1.5-11 9.8 3.4 14.2L32 37l-12.4 7.5L23 30.3l-11-9.8L26.4 19z"/>
+									<path d="M48 8v4M52 10h-4M14 50v4M16 52h-4" stroke-width="2.4"/>
+								</svg>
+							</div>
 							<h3>Newest Equipment</h3>
 							<p>We keep our route fresh with the latest claw, arcade, and vending machines — the kind that actually get played.</p>
 						</div>
 						<div class="feature">
-							<div class="feature-icon" aria-hidden="true">&#128736;</div>
+							<div class="feature-icon" aria-hidden="true">
+								<svg class="icon-sticker" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M32 6l18 6v14c0 12-8 22-18 26-10-4-18-14-18-26V12z"/>
+									<path d="M23 31l6 6 12-14"/>
+								</svg>
+							</div>
 							<h3>Reliable Service</h3>
 							<p>Our technicians service every machine on a regular schedule. No downtime, no broken games, no complaints.</p>
 						</div>
 						<div class="feature">
-							<div class="feature-icon" aria-hidden="true">&#128176;</div>
+							<div class="feature-icon" aria-hidden="true">
+								<svg class="icon-sticker" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M8 48l12-14 10 8 18-22"/>
+									<path d="M38 20h14v14"/>
+									<path d="M8 56h48"/>
+								</svg>
+							</div>
 							<h3>Maximized Revenue</h3>
 							<p>We know what works. We tune the game mix to your traffic and keep payouts dialed in so the cash keeps flowing.</p>
 						</div>
@@ -133,32 +242,37 @@
 				</div>
 			</section>
 
-			<div class="wave wave-white" aria-hidden="true"></div>
-
-			<section class="section section-white">
+			<section class="section section-yellow section-games section-textured">
+				<span class="section-sticker section-sticker-star-2" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="section-sticker section-sticker-circle-1" aria-hidden="true"></span>
 				<div class="section-inner">
 					<h2 class="section-title">Our Game Selection</h2>
 					<p class="section-lede">A full lineup of modern arcade entertainment — built to attract families, kids, and anyone who wants to have a little fun.</p>
-					<div class="game-cards">
+					<div class="game-cards game-cards-tilt">
 						<article class="game-card">
-							<div class="game-card-image" style="background-image:url('/images/claw-machine.webp');" role="img" aria-label="Claw machine"></div>
+							<span class="card-badge card-badge-magenta" aria-hidden="true">Crowd Fave</span>
+							<div class="game-card-image" style="background-image:url('/images/claw-product-cut.png');" role="img" aria-label="Claw machine"></div>
 							<div class="game-card-body">
 								<h3>Claw Machines</h3>
-								<p>Newest prizes, bright lights, and proven performers. Kids love them. Parents love the photo opp.</p>
+								<p>The newest licensed plush — proven crowd-pleasers.</p>
 							</div>
 						</article>
 						<article class="game-card">
-							<div class="game-card-image" style="background-image:url('/images/video-games.webp');" role="img" aria-label="Video arcade games"></div>
+							<span class="card-badge card-badge-yellow" aria-hidden="true">Hot!</span>
+							<div class="game-card-image" style="background-image:url('/images/arcade-product-cut.png');" role="img" aria-label="Video arcade games"></div>
 							<div class="game-card-body">
 								<h3>Video Arcade</h3>
-								<p>From 80s classics to the latest hits, our arcade cabinets keep guests playing while they wait.</p>
+								<p>Classics and new hits in cabinets that keep guests playing.</p>
 							</div>
 						</article>
 						<article class="game-card">
-							<div class="game-card-image" style="background-image:url('/images/bulk-vending.webp');" role="img" aria-label="Bulk vending machines"></div>
+							<span class="card-badge card-badge-cyan" aria-hidden="true">Kid Magnet</span>
+							<div class="game-card-image" style="background-image:url('/images/vending-product-cut.png');" role="img" aria-label="Bulk vending machines"></div>
 							<div class="game-card-body">
 								<h3>Bulk Vending</h3>
-								<p>Candy, toys, and bouncy balls. Small footprint, steady daily revenue, and an instant win for kids.</p>
+								<p>Small footprint. Steady daily revenue. Instant kid magnet.</p>
 							</div>
 						</article>
 					</div>
@@ -168,14 +282,51 @@
 				</div>
 			</section>
 
-			<div class="wave wave-yellow" aria-hidden="true"></div>
+			<section class="section section-white section-textured">
+				<div class="section-inner">
+					<h2 class="section-title">Perfect For Your Business</h2>
+					<p class="section-lede">If your space has foot traffic and a little unused floor space, chances are we're a great fit. A few of the venues we love placing games in:</p>
+					<div class="venue-grid">
+						<div class="venue">
+							<h3>Restaurants &amp; Pizza</h3>
+							<p>Keep kids entertained while parents finish their meal. Families stay longer, order dessert more often.</p>
+						</div>
+						<div class="venue">
+							<h3>Skating Rinks</h3>
+							<p>Games fill the gaps between sessions and turn rink nights into full-evening outings.</p>
+						</div>
+						<div class="venue">
+							<h3>Breweries &amp; Taprooms</h3>
+							<p>Arcade cabinets fit right into brewery game rooms. A second pint while chasing a high score is an easy sell.</p>
+						</div>
+						<div class="venue">
+							<h3>Laundromats</h3>
+							<p>Nothing makes a wash cycle pass faster than a claw machine. Kid-friendly venues with captive audiences.</p>
+						</div>
+						<div class="venue">
+							<h3>Car Washes</h3>
+							<p>Waiting rooms are gold. A quick claw attempt turns a 15-minute wait into a memorable stop.</p>
+						</div>
+						<div class="venue">
+							<h3>Family Entertainment</h3>
+							<p>Bowling, mini-golf, trampoline parks — everywhere families gather, arcade fits the vibe.</p>
+						</div>
+					</div>
+					<div style="text-align:center; margin-top:36px;">
+						<a href="/venues.html" class="btn btn-magenta">See All Venue Types</a>
+					</div>
+				</div>
+			</section>
 
-			<section class="section section-yellow">
+			<section class="section section-orange section-textured">
+				<span class="section-sticker section-sticker-zigzag-2" aria-hidden="true">
+					<svg viewBox="0 0 60 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M3 18l9-12 9 12 9-12 9 12 9-12 9 12"/>
+					</svg>
+				</span>
 				<div class="section-inner" style="position:relative;">
-					<span class="confetti confetti-circle confetti-animate confetti-sm" style="top:0; left:10%;" aria-hidden="true"></span>
-					<span class="confetti confetti-triangle confetti-animate" style="bottom:20px; right:12%;" aria-hidden="true"></span>
 					<h2 class="section-title">Serving All of Northwest Arkansas</h2>
-					<p class="section-lede" style="color:var(--ink);">From Fayetteville to Bentonville — we place and service games across the region.</p>
+					<p class="section-lede" style="color:var(--white);">From Fayetteville to Bentonville — we place and service games across the region.</p>
 					<div class="cities">
 						<span class="city-badge">Fayetteville</span>
 						<span class="city-badge">Rogers</span>
@@ -189,13 +340,24 @@
 			</section>
 
 			<section class="cta-strip">
-				<span class="confetti confetti-star confetti-a confetti-animate" aria-hidden="true"></span>
-				<span class="confetti confetti-burst confetti-b confetti-animate confetti-sm" aria-hidden="true"></span>
-				<span class="confetti confetti-triangle confetti-c confetti-animate" aria-hidden="true"></span>
-				<span class="confetti confetti-circle confetti-d confetti-animate confetti-sm" aria-hidden="true"></span>
+				<span class="cta-sparkle cta-sparkle-1" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="cta-sparkle cta-sparkle-2" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="cta-sparkle cta-sparkle-3" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+						<path d="M12 2v5M12 17v5M2 12h5M17 12h5M4.5 4.5l3.5 3.5M16 16l3.5 3.5M4.5 19.5l3.5-3.5M16 8l3.5-3.5"/>
+					</svg>
+				</span>
 				<h2>Ready to Partner? Let's Chat.</h2>
 				<p>Most partnerships start with a 10-minute phone call. No pressure, no sales pitch.</p>
-				<a href="/contact.html" class="btn">Request a Consultation</a>
+				<form class="cta-form" action="/contact.html" method="get">
+					<input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required>
+					<input type="text" name="business" placeholder="Business Name" aria-label="Business Name" required>
+					<button type="submit" class="btn btn-magenta">Submit Inquiry</button>
+				</form>
 			</section>
 		</main>
 

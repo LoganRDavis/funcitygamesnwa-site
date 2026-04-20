@@ -1,1 +1,13 @@
+# macOS
 .DS_Store
+
+# Track Claude Code settings in this repo (overrides global ignore)
+!.claude/settings.local.json
+
+# Playwright MCP session artifacts (screenshots, console logs, page snapshots)
+.playwright-mcp/
+
+# Stray Playwright screenshots at repo root (from before --output-dir was set)
+/*-page.png
+/*-page-*.png
+/*-section.png

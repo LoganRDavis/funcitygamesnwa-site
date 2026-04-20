@@ -31,70 +31,99 @@
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="apple-touch-icon" href="/icon-192.png">
 	<link rel="preload" as="font" href="/fonts/open-sans-latin.woff2" type="font/woff2" crossorigin>
-	<link rel="stylesheet" href="/css/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap">
+	<link rel="stylesheet" href="/css/main.css?v=20260419n">
 	<script src="/js/components.js" defer></script>
 </head>
 
-<body>
+<body class="theme-modern">
 	<div class="main-container">
 		<site-header></site-header>
 
 		<main id="main-content">
 			<section class="hero">
-				<span class="confetti confetti-star confetti-a confetti-animate" aria-hidden="true"></span>
-				<span class="confetti confetti-triangle confetti-b confetti-animate confetti-lg" aria-hidden="true"></span>
-				<span class="confetti confetti-burst confetti-c confetti-animate confetti-sm" aria-hidden="true"></span>
-				<span class="confetti confetti-zigzag confetti-d confetti-animate" aria-hidden="true"></span>
-				<span class="confetti confetti-circle confetti-e confetti-animate confetti-sm" aria-hidden="true"></span>
+				<span class="hero-blob hero-blob-cyan" aria-hidden="true"></span>
+				<span class="hero-blob hero-blob-magenta" aria-hidden="true"></span>
+				<span class="hero-blob hero-blob-yellow" aria-hidden="true"></span>
+				<span class="hero-sparkle hero-sparkle-1" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="hero-sparkle hero-sparkle-2" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="hero-sparkle hero-sparkle-3" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+						<path d="M12 2v5M12 17v5M2 12h5M17 12h5M4.5 4.5l3.5 3.5M16 16l3.5 3.5M4.5 19.5l3.5-3.5M16 8l3.5-3.5"/>
+					</svg>
+				</span>
 				<div class="hero-inner">
-					<span class="hero-badge">Partnerships That Fit</span>
-					<h1>Who We <span class="accent">Partner With</span></h1>
+					<span class="hero-badge">
+						<svg class="hero-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+						Partnerships That Fit
+					</span>
+					<h1>Who We<br><span class="accent">Partner With</span></h1>
 					<p>If your business has foot traffic and a little unused space, you're probably a great fit for the Fun City Games route. Here's who we already work with.</p>
+					<div class="hero-ctas">
+						<a href="/contact.html" class="btn btn-magenta">Ask About Your Space</a>
+						<a href="tel:+18776242637" class="btn hero-btn-phone">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.6a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.4-1.3a2 2 0 012.1-.5c.8.3 1.7.6 2.6.7a2 2 0 011.7 2z"/>
+							</svg>
+							Call (877) 62-GAMES
+						</a>
+					</div>
+				</div>
+				<div class="hero-product">
+					<picture>
+						<img src="/images/vending-product-cut.png" alt="Fun City Games bulk vending machines for partner venues" width="512" height="519">
+					</picture>
 				</div>
 			</section>
 
-			<section class="section section-white">
+			<section class="section section-cream bg-dots">
+				<span class="section-sticker section-sticker-star-1" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="section-sticker section-sticker-zigzag-1" aria-hidden="true">
+					<svg viewBox="0 0 60 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M3 18l9-12 9 12 9-12 9 12 9-12 9 12"/>
+					</svg>
+				</span>
 				<div class="section-inner">
 					<h2 class="section-title">Ideal Venue Types</h2>
 					<p class="section-lede">Different spaces, same story: games turn waiting time and dead corners into happy customers and extra revenue.</p>
 					<div class="venue-grid">
 						<div class="venue">
-							<div class="venue-icon" aria-hidden="true">&#127829;</div>
 							<h3>Restaurants</h3>
 							<p>Keep kids entertained while parents finish their meal. Families stay longer, order dessert more often.</p>
 						</div>
 						<div class="venue">
-							<div class="venue-icon" aria-hidden="true">&#127866;</div>
 							<h3>Breweries &amp; Taprooms</h3>
 							<p>Arcade cabinets fit naturally in brewery game rooms. A second pint while chasing a high score is an easy sell.</p>
 						</div>
 						<div class="venue">
-							<div class="venue-icon" aria-hidden="true">&#129529;</div>
 							<h3>Laundromats</h3>
 							<p>Nothing makes a wash cycle pass faster than a claw machine. Kid-friendly venues with captive audiences.</p>
 						</div>
 						<div class="venue">
-							<div class="venue-icon" aria-hidden="true">&#128663;</div>
 							<h3>Car Washes</h3>
 							<p>Waiting rooms are gold. A quick claw attempt turns a 15-minute wait into a memorable stop.</p>
 						</div>
 						<div class="venue">
-							<div class="venue-icon" aria-hidden="true">&#128722;</div>
 							<h3>Retail Stores</h3>
 							<p>Checkout zones, entrances, and family sections. Bulk vending in particular is a compact daily earner.</p>
 						</div>
 						<div class="venue">
-							<div class="venue-icon" aria-hidden="true">&#127968;</div>
 							<h3>Family Entertainment</h3>
 							<p>Bowling, mini-golf, trampoline parks, pizza kitchens — everywhere families gather, arcade fits the vibe.</p>
 						</div>
 						<div class="venue">
-							<div class="venue-icon" aria-hidden="true">&#127946;</div>
 							<h3>Hotels &amp; Motels</h3>
 							<p>Lobby games make check-in and check-out waits pleasant for families on the road.</p>
 						</div>
 						<div class="venue">
-							<div class="venue-icon" aria-hidden="true">&#127836;</div>
 							<h3>Pizza &amp; Quick Serve</h3>
 							<p>Great for call-ahead and dine-in mix. Parents love the extra moment of peace, kids love the prizes.</p>
 						</div>
@@ -102,20 +131,34 @@
 				</div>
 			</section>
 
-			<section class="section section-yellow">
-				<div class="section-inner">
+			<section class="section section-magenta section-textured">
+				<span class="section-sticker section-sticker-zigzag-2" aria-hidden="true">
+					<svg viewBox="0 0 60 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M3 18l9-12 9 12 9-12 9 12 9-12 9 12"/>
+					</svg>
+				</span>
+				<div class="section-inner" style="position:relative; text-align:center;">
 					<h2 class="section-title">Not Sure If You're a Fit?</h2>
-					<p class="section-lede" style="color:var(--ink);">If you have 3×3 feet of floor space and any amount of foot traffic, the math usually works. Let us take a look — consultations are always free.</p>
-					<div style="text-align:center;">
-						<a href="/contact.html" class="btn btn-magenta">Ask About Your Space</a>
-					</div>
+					<p class="section-lede">If you have 3×3 feet of floor space and any amount of foot traffic, the math usually works. Let us take a look — consultations are always free.</p>
+					<a href="/contact.html" class="btn btn-magenta">Ask About Your Space</a>
 				</div>
 			</section>
 
 			<section class="cta-strip">
+				<span class="cta-sparkle cta-sparkle-1" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="cta-sparkle cta-sparkle-2" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="cta-sparkle cta-sparkle-3" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+						<path d="M12 2v5M12 17v5M2 12h5M17 12h5M4.5 4.5l3.5 3.5M16 16l3.5 3.5M4.5 19.5l3.5-3.5M16 8l3.5-3.5"/>
+					</svg>
+				</span>
 				<h2>Let's Turn Your Space Into a Revenue Stream</h2>
 				<p>We'll show you exactly what fits and exactly what you'd earn.</p>
-				<a href="/contact.html" class="btn">Partner With Us</a>
+				<a href="/contact.html" class="btn btn-magenta">Partner With Us</a>
 			</section>
 		</main>
 

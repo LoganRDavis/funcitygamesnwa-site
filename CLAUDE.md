@@ -1,34 +1,42 @@
 # CLAUDE.md
 
-Guidance for Claude Code when working in this repo.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Overview
 
-Static HTML/CSS/JS site for Fun City Games — an arcade game route operator partnering with Northwest Arkansas businesses. No build system, no framework, no package manager.
+Static marketing site for Fun City Games — an arcade game route operator partnering with Northwest Arkansas businesses. No build step, no framework, no package manager. Plain HTML/CSS/JS served as files.
 
 ## Commands
 
-- `make serve` — Local dev server at http://localhost:8000
-- Pushing to `master` deploys automatically via Cloudflare Pages
+- `make serve` — Local dev server at http://localhost:8000 (Python's built-in `http.server`).
+- Pushing to `main` deploys automatically via Cloudflare Pages.
 
-## Structure
+## Architecture
 
-- Pages: `index.html`, `how-it-works.html`, `games.html`, `venues.html`, `locations.html`, `about.html`, `contact.html`, `404.html`
-- `js/components.js` — Web components for shared header/footer (`<site-header>`, `<site-footer>`)
-- `fonts/` — Self-hosted Fredoka (display) and Open Sans (body) WOFF2 files
-- `css/main.css` — Main stylesheet
-- `css/404.css` — 404 page styles
-- `images/` — Logos, game photos, icons. Drop logo at `images/logo.png` and `images/logo-horizontal.svg`
+Each page is a fully self-contained HTML file — there is no template engine. To add a page, copy an existing page (e.g. `about.html`) and update:
 
-## Key Patterns
+1. `<title>`, `<meta name="description">`, OG/Twitter tags, and `<link rel="canonical">`.
+2. Add the page to `sitemap.xml`.
+3. If the page should appear in primary nav, add it to `NAV_LINKS` in `js/components.js`.
 
-- Absolute asset paths from root (`/css/main.css`, `/images/...`)
-- Each page has OG/Twitter meta, canonical, and the shared `LocalBusiness` JSON-LD block
-- Deploy excludes listed in `.cfignore`
-- Brand palette: magenta `#E6007E`, yellow `#FFD21F`, cyan `#1EC8E6`, navy `#1B2A49`
-- Phone: `(877) 62-GAMES` display, `+18776242637` tel link
+`LocalBusiness` JSON-LD lives only on pages where it's contextually appropriate (currently `index.html` and `locations.html`) — not every page. If you add it to a new page, keep the core fields (name, URL, telephone, address, areaServed) consistent with those two.
+
+`404.html` is standalone — it uses `/css/404.css`, not `main.css`, and does not include `<site-header>`/`<site-footer>`. Edit it directly without touching shared chrome.
+
+**Shared chrome via web components.** Header and footer are custom elements defined in `js/components.js` (`<site-header>`, `<site-footer>`). Pages must include `<script src="/js/components.js" defer>` and drop the elements into the body. Active nav state is derived from `window.location.pathname`, so nav links use absolute paths from root.
+
+**Asset paths are absolute** (`/css/main.css`, `/images/...`, `/fonts/...`) — relative paths will break because the dev server and Cloudflare Pages both serve from root.
+
+**Design tokens.** CSS custom properties in `:root` at the top of `css/main.css` are the source of truth for colors, shadows, and the brand palette (magenta `--magenta`, yellow `--yellow`, cyan `--cyan`, navy `--navy`, plus orange/purple/mint accents). The `<meta name="theme-color">` value in each page's `<head>` is a separate, hardcoded hex and may drift — update it deliberately if the brand palette changes.
+
+**Font loading is split.** Open Sans (body) is self-hosted in `fonts/` as WOFF2 and the Latin subset is preloaded via `<link rel="preload">` in each page head — keep that link in sync with the actual filename if fonts are renamed. Fredoka (display) is loaded from Google Fonts via `<link href="https://fonts.googleapis.com/css2?family=Fredoka:...">` in each page head. If Fredoka is ever brought in-house, drop the Google Fonts link and add a preload + `@font-face` block alongside Open Sans.
+
+## Deploy
+
+`.cfignore` controls what Cloudflare Pages excludes from the deploy (currently `.git`, `.vscode`, `.claude`, `README.md`, `CLAUDE.md`, `Makefile`). New tooling/config directories that shouldn't ship to prod must be added there.
+
+## Contact constants (used across pages)
+
+- Phone: `(877) 62-GAMES` for display, `+18776242637` for `tel:` links
 - Email: `info@funcitygamesnwa.com`
-
-## Domain
-
-- https://www.funcitygamesnwa.com
+- Production domain: https://www.funcitygamesnwa.com

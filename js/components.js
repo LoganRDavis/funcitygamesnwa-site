@@ -32,7 +32,10 @@ class SiteHeader extends HTMLElement {
 			<header>
 				<div id="headerContent">
 					<a href="/" aria-label="Fun City Games home">
-						<img class="header-logo" src="/images/logo.svg" alt="Fun City Games" width="260" height="70">
+						<picture>
+							<source type="image/webp" srcset="/images/logo-horizontal-256.webp 1x, /images/logo-horizontal-512.webp 2x">
+							<img class="header-logo" src="/images/logo-horizontal-256.png" srcset="/images/logo-horizontal-256.png 1x, /images/logo-horizontal-512.png 2x" alt="Fun City Games" width="198" height="70">
+						</picture>
 					</a>
 
 					<button class="hamburger-icon" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu-container">
@@ -45,10 +48,11 @@ class SiteHeader extends HTMLElement {
 						<nav aria-label="Primary">
 							<ul>
 								${navItems}
-								<li class="nav-cta"><a href="/contact.html" class="btn btn-magenta">Partner With Us</a></li>
 							</ul>
 						</nav>
 					</div>
+
+					<a href="tel:+18776242637" class="header-phone" aria-label="Call (877) 62-GAMES">(877) 62-GAMES</a>
 
 					<div class="mobile-menu-container" id="mobile-menu-container" aria-hidden="true">
 						<button class="mobile-menu-outside" aria-label="Close navigation menu" tabindex="-1"></button>
@@ -110,7 +114,12 @@ class SiteFooter extends HTMLElement {
 			<footer>
 				<div class="footer-container">
 					<div class="footer-brand">
-						<a href="/"><img src="/images/logo.svg" alt="Fun City Games" width="180" height="48"></a>
+						<a href="/">
+							<picture>
+								<source type="image/webp" srcset="/images/logo-horizontal-256.webp 1x, /images/logo-horizontal-512.webp 2x">
+								<img src="/images/logo-horizontal-256.png" srcset="/images/logo-horizontal-256.png 1x, /images/logo-horizontal-512.png 2x" alt="Fun City Games" width="180" height="64">
+							</picture>
+						</a>
 						<p>Arcade game route partner serving Northwest Arkansas — at zero cost to your business.</p>
 					</div>
 					<div class="footer-col">

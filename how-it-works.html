@@ -31,43 +31,106 @@
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="apple-touch-icon" href="/icon-192.png">
 	<link rel="preload" as="font" href="/fonts/open-sans-latin.woff2" type="font/woff2" crossorigin>
-	<link rel="stylesheet" href="/css/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap">
+	<link rel="stylesheet" href="/css/main.css?v=20260419n">
 	<script src="/js/components.js" defer></script>
 </head>
 
-<body>
+<body class="theme-modern">
 	<div class="main-container">
 		<site-header></site-header>
 
 		<main id="main-content">
-			<section class="hero hero-cyan">
-				<span class="confetti confetti-star confetti-a confetti-animate" aria-hidden="true"></span>
-				<span class="confetti confetti-triangle confetti-b confetti-animate" aria-hidden="true"></span>
-				<span class="confetti confetti-burst confetti-c confetti-animate confetti-sm" aria-hidden="true"></span>
-				<span class="confetti confetti-zigzag confetti-d confetti-animate" aria-hidden="true"></span>
+			<section class="hero">
+				<span class="hero-blob hero-blob-cyan" aria-hidden="true"></span>
+				<span class="hero-blob hero-blob-magenta" aria-hidden="true"></span>
+				<span class="hero-blob hero-blob-yellow" aria-hidden="true"></span>
+				<span class="hero-sparkle hero-sparkle-1" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="hero-sparkle hero-sparkle-2" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="hero-sparkle hero-sparkle-3" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+						<path d="M12 2v5M12 17v5M2 12h5M17 12h5M4.5 4.5l3.5 3.5M16 16l3.5 3.5M4.5 19.5l3.5-3.5M16 8l3.5-3.5"/>
+					</svg>
+				</span>
 				<div class="hero-inner">
-					<span class="hero-badge">Zero Cost. Zero Hassle.</span>
-					<h1>How Our <span class="accent">Partnership Works</span></h1>
+					<span class="hero-badge">
+						<svg class="hero-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+						Zero Cost. Zero Hassle.
+					</span>
+					<h1>How Our<br><span class="accent">Partnership Works</span></h1>
 					<p>A straightforward, profit-sharing arcade route partnership. No contracts full of fine print, no equipment to buy, no maintenance to worry about.</p>
+					<div class="hero-ctas">
+						<a href="/contact.html" class="btn btn-magenta">Start a Partnership</a>
+						<a href="tel:+18776242637" class="btn hero-btn-phone">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.6a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.4-1.3a2 2 0 012.1-.5c.8.3 1.7.6 2.6.7a2 2 0 011.7 2z"/>
+							</svg>
+							Call (877) 62-GAMES
+						</a>
+					</div>
+				</div>
+				<div class="hero-product">
+					<picture>
+						<img src="/images/claw-product-cut.png" alt="Fun City Games claw machine ready for placement" width="512" height="519">
+					</picture>
 				</div>
 			</section>
 
-			<section class="section section-white">
+			<section class="section section-cream bg-dots section-steps">
+				<span class="section-sticker section-sticker-star-1" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="section-sticker section-sticker-zigzag-1" aria-hidden="true">
+					<svg viewBox="0 0 60 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M3 18l9-12 9 12 9-12 9 12 9-12 9 12"/>
+					</svg>
+				</span>
 				<div class="section-inner">
 					<h2 class="section-title">The 3-Step Partnership</h2>
-					<div class="steps">
+					<p class="section-lede">Three simple steps to turn unused floor space into a steady revenue stream — no upfront costs, no hassle.</p>
+					<div class="steps steps-path">
+						<svg class="steps-trail" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+							<path d="M 80 40 Q 300 -10 600 40 T 1120 40" fill="none" stroke="#FF0F8A" stroke-width="8" stroke-linecap="round" stroke-dasharray="4 20"/>
+						</svg>
 						<div class="step">
-							<div class="step-number">1</div>
+							<div class="step-icon" data-step="1" aria-hidden="true">
+								<svg class="icon-sticker" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+									<rect x="10" y="22" width="44" height="34" rx="3"/>
+									<path d="M10 22l22-14 22 14"/>
+									<path d="M32 22v6"/>
+									<path d="M32 28l-7 6M32 28l7 6"/>
+									<circle cx="25" cy="41" r="3.5" fill="currentColor"/>
+									<circle cx="39" cy="43" r="3" fill="currentColor"/>
+									<circle cx="32" cy="48" r="2.5" fill="currentColor"/>
+								</svg>
+							</div>
 							<h3>Free Consultation &amp; Placement</h3>
 							<p>We visit your space, listen to what you're looking for, and recommend the right mix of games for your customer base. If it's a fit, we schedule delivery and installation — all at no cost to you.</p>
 						</div>
 						<div class="step">
-							<div class="step-number">2</div>
+							<div class="step-icon" data-step="2" aria-hidden="true">
+								<svg class="icon-sticker" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M42 8a10 10 0 00-10 14L10 44a4 4 0 005.7 5.7l22-22A10 10 0 0052 18l-7 7-5-1-1-5 7-7a10 10 0 00-4-4z"/>
+									<circle cx="13" cy="47" r="1.8" fill="currentColor"/>
+								</svg>
+							</div>
 							<h3>We Handle Everything</h3>
 							<p>Weekly or bi-weekly service visits. We restock prizes, empty the cash box, and repair anything that needs attention. You focus on your business. We focus on the games.</p>
 						</div>
 						<div class="step">
-							<div class="step-number">3</div>
+							<div class="step-icon" data-step="3" aria-hidden="true">
+								<svg class="icon-sticker" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+									<circle cx="32" cy="32" r="22"/>
+									<path d="M32 18v28"/>
+									<path d="M38 24h-9a4 4 0 000 8h6a4 4 0 010 8h-10"/>
+								</svg>
+							</div>
 							<h3>You Get Paid</h3>
 							<p>Transparent profit splits on every service visit. Cash in hand or direct deposit — your choice. Statements are clear, simple, and honest.</p>
 						</div>
@@ -75,37 +138,75 @@
 				</div>
 			</section>
 
-			<section class="section section-cyan">
+			<section class="section section-cyan-full section-textured">
+				<span class="section-sticker section-sticker-burst-1" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+						<path d="M12 2v5M12 17v5M2 12h5M17 12h5M4.5 4.5l3.5 3.5M16 16l3.5 3.5M4.5 19.5l3.5-3.5M16 8l3.5-3.5"/>
+					</svg>
+				</span>
+				<span class="section-sticker section-sticker-circle-2" aria-hidden="true"></span>
 				<div class="section-inner">
 					<h2 class="section-title">What You Get as a Partner</h2>
-					<div class="venue-grid">
-						<div class="venue">
-							<div class="venue-icon" aria-hidden="true">&#128176;</div>
+					<p class="section-lede">A full-service partnership with your name on the split — and none of the hassle.</p>
+					<div class="feature-grid">
+						<div class="feature">
+							<div class="feature-icon" aria-hidden="true">
+								<svg class="icon-sticker" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+									<circle cx="32" cy="32" r="22"/>
+									<path d="M32 18v28"/>
+									<path d="M38 24h-9a4 4 0 000 8h6a4 4 0 010 8h-10"/>
+								</svg>
+							</div>
 							<h3>Extra Revenue</h3>
 							<p>Passive income from floor space you're already paying for.</p>
 						</div>
-						<div class="venue">
-							<div class="venue-icon" aria-hidden="true">&#128075;</div>
+						<div class="feature">
+							<div class="feature-icon" aria-hidden="true">
+								<svg class="icon-sticker" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M32 54s-18-10-18-24a10 10 0 0118-6 10 10 0 0118 6c0 14-18 24-18 24z"/>
+								</svg>
+							</div>
 							<h3>Happy Customers</h3>
 							<p>Games keep kids entertained and families in your venue longer.</p>
 						</div>
-						<div class="venue">
-							<div class="venue-icon" aria-hidden="true">&#128736;</div>
+						<div class="feature">
+							<div class="feature-icon" aria-hidden="true">
+								<svg class="icon-sticker" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M42 8a10 10 0 00-10 14L10 44a4 4 0 005.7 5.7l22-22A10 10 0 0052 18l-7 7-5-1-1-5 7-7a10 10 0 00-4-4z"/>
+									<circle cx="13" cy="47" r="1.8" fill="currentColor"/>
+								</svg>
+							</div>
 							<h3>Zero Maintenance</h3>
 							<p>We own, operate, and repair every machine. Never a service call for you.</p>
 						</div>
-						<div class="venue">
-							<div class="venue-icon" aria-hidden="true">&#128736;</div>
+						<div class="feature">
+							<div class="feature-icon" aria-hidden="true">
+								<svg class="icon-sticker" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M50 20a22 22 0 10-4 28"/>
+									<path d="M50 8v14H36"/>
+								</svg>
+							</div>
 							<h3>Fresh Rotations</h3>
 							<p>Games rotate periodically to keep your space feeling new.</p>
 						</div>
-						<div class="venue">
-							<div class="venue-icon" aria-hidden="true">&#128270;</div>
+						<div class="feature">
+							<div class="feature-icon" aria-hidden="true">
+								<svg class="icon-sticker" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M32 6c-9 0-16 7-16 16 0 12 16 36 16 36s16-24 16-36c0-9-7-16-16-16z"/>
+									<circle cx="32" cy="22" r="6"/>
+								</svg>
+							</div>
 							<h3>Local Partner</h3>
 							<p>We're right here in NWA — not a national chain with a ticket queue.</p>
 						</div>
-						<div class="venue">
-							<div class="venue-icon" aria-hidden="true">&#128221;</div>
+						<div class="feature">
+							<div class="feature-icon" aria-hidden="true">
+								<svg class="icon-sticker" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M18 6h20l10 10v40c0 2-2 4-4 4H18c-2 0-4-2-4-4V10c0-2 2-4 4-4z"/>
+									<path d="M38 6v10h10"/>
+									<path d="M22 30h20M22 38h20M22 46h14"/>
+								</svg>
+							</div>
 							<h3>Simple Agreement</h3>
 							<p>Month-to-month. No penalties if it's not working out. We trust the model.</p>
 						</div>
@@ -113,38 +214,58 @@
 				</div>
 			</section>
 
-			<section class="section section-white">
+			<section class="section section-yellow section-textured">
+				<span class="section-sticker section-sticker-star-2" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="section-sticker section-sticker-zigzag-2" aria-hidden="true">
+					<svg viewBox="0 0 60 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M3 18l9-12 9 12 9-12 9 12 9-12 9 12"/>
+					</svg>
+				</span>
 				<div class="section-inner">
 					<h2 class="section-title">Common Questions</h2>
-					<div style="max-width:800px; margin:0 auto;">
-						<div style="margin-bottom:24px;">
-							<h3 style="color:var(--magenta);">How much space do I need?</h3>
-							<p>As little as a single claw machine footprint (about 3×3 feet) up to a full arcade corner. We'll recommend a lineup that fits your space and traffic.</p>
+					<p class="section-lede">Quick answers to the questions we get on almost every consultation call.</p>
+					<div style="max-width:780px; margin:0 auto; display:grid; gap:18px;">
+						<div style="background:#fff; border-radius:20px; padding:26px 28px; box-shadow:0 10px 28px rgba(15,20,41,0.08);">
+							<h3 style="margin:0 0 8px; font-family:'Fredoka',sans-serif; font-size:1.2rem; color:#FF0F8A;">How much space do I need?</h3>
+							<p style="margin:0;">As little as a single claw machine footprint (about 3×3 feet) up to a full arcade corner. We'll recommend a lineup that fits your space and traffic.</p>
 						</div>
-						<div style="margin-bottom:24px;">
-							<h3 style="color:var(--magenta);">Do I pay anything upfront?</h3>
-							<p>Never. We cover equipment, delivery, installation, prizes, service, repairs, and insurance. You just provide the outlet and the square footage.</p>
+						<div style="background:#fff; border-radius:20px; padding:26px 28px; box-shadow:0 10px 28px rgba(15,20,41,0.08);">
+							<h3 style="margin:0 0 8px; font-family:'Fredoka',sans-serif; font-size:1.2rem; color:#FF0F8A;">Do I pay anything upfront?</h3>
+							<p style="margin:0;">Never. We cover equipment, delivery, installation, prizes, service, repairs, and insurance. You just provide the outlet and the square footage.</p>
 						</div>
-						<div style="margin-bottom:24px;">
-							<h3 style="color:var(--magenta);">What's the profit split?</h3>
-							<p>It varies by machine type and location, but it's always transparent and agreed upfront. We'll walk you through exact numbers during our free consultation.</p>
+						<div style="background:#fff; border-radius:20px; padding:26px 28px; box-shadow:0 10px 28px rgba(15,20,41,0.08);">
+							<h3 style="margin:0 0 8px; font-family:'Fredoka',sans-serif; font-size:1.2rem; color:#FF0F8A;">What's the profit split?</h3>
+							<p style="margin:0;">It varies by machine type and location, but it's always transparent and agreed upfront. We'll walk you through exact numbers during our free consultation.</p>
 						</div>
-						<div style="margin-bottom:24px;">
-							<h3 style="color:var(--magenta);">What if a game isn't making money?</h3>
-							<p>We swap it. Plain and simple. We want every machine on our route earning — our incentives are aligned with yours.</p>
+						<div style="background:#fff; border-radius:20px; padding:26px 28px; box-shadow:0 10px 28px rgba(15,20,41,0.08);">
+							<h3 style="margin:0 0 8px; font-family:'Fredoka',sans-serif; font-size:1.2rem; color:#FF0F8A;">What if a game isn't making money?</h3>
+							<p style="margin:0;">We swap it. Plain and simple. We want every machine on our route earning — our incentives are aligned with yours.</p>
 						</div>
-						<div style="margin-bottom:24px;">
-							<h3 style="color:var(--magenta);">Am I locked in?</h3>
-							<p>No. If it's not working for your business, we pick the games up. We'd rather keep earning partners than force bad fits.</p>
+						<div style="background:#fff; border-radius:20px; padding:26px 28px; box-shadow:0 10px 28px rgba(15,20,41,0.08);">
+							<h3 style="margin:0 0 8px; font-family:'Fredoka',sans-serif; font-size:1.2rem; color:#FF0F8A;">Am I locked in?</h3>
+							<p style="margin:0;">No. If it's not working for your business, we pick the games up. We'd rather keep earning partners than force bad fits.</p>
 						</div>
 					</div>
 				</div>
 			</section>
 
 			<section class="cta-strip">
+				<span class="cta-sparkle cta-sparkle-1" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="cta-sparkle cta-sparkle-2" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 9.2L24 12l-9.2 2.8L12 24l-2.8-9.2L0 12l9.2-2.8z"/></svg>
+				</span>
+				<span class="cta-sparkle cta-sparkle-3" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+						<path d="M12 2v5M12 17v5M2 12h5M17 12h5M4.5 4.5l3.5 3.5M16 16l3.5 3.5M4.5 19.5l3.5-3.5M16 8l3.5-3.5"/>
+					</svg>
+				</span>
 				<h2>Let's See If Fun City Games Is a Fit</h2>
 				<p>The first step is a free, no-pressure walkthrough of your space.</p>
-				<a href="/contact.html" class="btn">Request a Consultation</a>
+				<a href="/contact.html" class="btn btn-magenta">Request a Consultation</a>
 			</section>
 		</main>
 
