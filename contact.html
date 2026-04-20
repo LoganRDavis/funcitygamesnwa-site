@@ -36,7 +36,7 @@
 	<link rel="preload" as="font" href="/fonts/open-sans-latin.woff2" type="font/woff2" crossorigin>
 	<link rel="preload" as="font" href="/fonts/fredoka-latin.woff2" type="font/woff2" crossorigin>
 	<link rel="preload" as="image" href="/images/contact-hero-512.webp" imagesrcset="/images/contact-hero-512.webp 1x, /images/contact-hero-1024.webp 2x" type="image/webp" fetchpriority="high">
-	<link rel="stylesheet" href="/css/main.css?v=20260420a">
+	<link rel="stylesheet" href="/css/main.css?v=20260420b">
 	<script src="/js/components.js" defer></script>
 
 	<script type="application/ld+json">
@@ -102,7 +102,7 @@
 					<h1>Get<br><span class="accent">Started Today</span></h1>
 					<p>Tell us about your space. We'll come by, walk through your options, and show you exactly what a partnership would look like. No pressure, no commitment.</p>
 					<div class="hero-ctas">
-						<a href="#contact-form" class="btn btn-magenta">Send a Message</a>
+						<a href="mailto:info@funcitygamesnwa.com" class="btn btn-magenta">Email Us</a>
 						<a href="tel:+18776242637" class="btn btn-phone">
 							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 								<path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.6a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.4-1.3a2 2 0 012.1-.5c.8.3 1.7.6 2.6.7a2 2 0 011.7 2z"/>
@@ -129,55 +129,28 @@
 					</svg>
 				</span>
 				<div class="section-inner">
-					<div class="contact-wrap">
-						<form class="contact-form" action="mailto:info@funcitygamesnwa.com" method="post" enctype="text/plain">
-							<h2>Request a Consultation</h2>
-							<p style="margin-bottom:20px;">We respond within one business day. Usually same-day.</p>
-
-							<div class="form-field">
-								<label for="name">Your Name</label>
-								<input id="name" name="name" type="text" autocomplete="name" required>
-							</div>
-
-							<div class="form-field">
-								<label for="business">Business Name</label>
-								<input id="business" name="business" type="text" autocomplete="organization" required>
-							</div>
-
-							<div class="form-field">
-								<label for="email">Email</label>
-								<input id="email" name="email" type="email" autocomplete="email" required>
-							</div>
-
-							<div class="form-field">
-								<label for="phone">Phone</label>
-								<input id="phone" name="phone" type="tel" autocomplete="tel">
-							</div>
-
-							<div class="form-field">
-								<label for="message">Tell us about your space</label>
-								<textarea id="message" name="message" rows="5" placeholder="Where are you located? What kind of business? What kinds of games are you thinking about?"></textarea>
-							</div>
-
-							<div class="form-actions">
-								<button type="submit" class="btn btn-magenta">Send Inquiry</button>
-								<span style="font-size:0.9rem; opacity:0.7;">or call us directly &rarr;</span>
-							</div>
-						</form>
-
-						<aside class="contact-info">
-							<h2>Get In Touch</h2>
-							<dl class="contact-list">
-								<dt>Call Us</dt>
-								<dd><a href="tel:+18776242637">(877) 62-GAMES</a><br><span style="font-size:0.9rem; opacity:0.8;">(877) 624-2637</span></dd>
-								<dt>Email</dt>
-								<dd><a href="mailto:info@funcitygamesnwa.com">info@funcitygamesnwa.com</a></dd>
-								<dt>Service Area</dt>
-								<dd>All of Northwest Arkansas<br>Fayetteville · Rogers · Bentonville · Springdale</dd>
-							</dl>
-							<div class="local-badge">Locally Owned &amp; Operated<br>Serving NWA Since 2010</div>
-						</aside>
-					</div>
+					<aside class="contact-info" style="max-width:640px; margin:0 auto;">
+						<h2>Get In Touch</h2>
+						<p style="margin:0 0 24px; opacity:0.9;">Fastest way to reach us is a quick call or email. We respond within one business day — usually same-day.</p>
+						<div style="display:flex; flex-wrap:wrap; gap:14px; margin-bottom:28px;">
+							<a href="tel:+18776242637" class="btn btn-phone">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.6a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.4-1.3a2 2 0 012.1-.5c.8.3 1.7.6 2.6.7a2 2 0 011.7 2z"/>
+								</svg>
+								Call (877) 62-GAMES
+							</a>
+							<a href="mailto:info@funcitygamesnwa.com" class="btn btn-magenta">Email Us</a>
+						</div>
+						<dl class="contact-list">
+							<dt>Phone</dt>
+							<dd><a href="tel:+18776242637">(877) 62-GAMES</a> · (877) 624-2637</dd>
+							<dt>Email</dt>
+							<dd><a href="mailto:info@funcitygamesnwa.com">info@funcitygamesnwa.com</a></dd>
+							<dt>Service Area</dt>
+							<dd>All of Northwest Arkansas<br>Fayetteville · Rogers · Bentonville · Springdale</dd>
+						</dl>
+						<div class="local-badge">Locally Owned &amp; Operated<br>Serving NWA Since 2010</div>
+					</aside>
 				</div>
 			</section>
 
