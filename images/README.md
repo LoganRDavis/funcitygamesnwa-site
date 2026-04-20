@@ -1,29 +1,34 @@
-# Image assets to drop in
+# Image assets
 
-The HTML templates reference these paths. Drop matching files here and the site will pick them up.
+Catalog of what lives in this folder. Most raster images are shipped as a `.png` + `.webp` pair so `<picture>` can serve WebP with a PNG fallback; sized variants use a `-256` / `-512` / `-1024` suffix for `srcset`.
 
-## Required
+## In use
 
-| Path | Used on | Notes |
-|---|---|---|
-| `/favicon.ico` | All pages | Favicon. Generate from the logo. Place at repo root, not `images/`. |
-| `/icon-192.png` | PWA manifest | 192×192 PNG. Place at repo root. |
-| `/icon-512.png` | PWA manifest | 512×512 PNG. Place at repo root. |
-| `images/logo.svg` | `<site-header>`, `<site-footer>` | Current file is a placeholder wordmark. Replace with the real "FUN CITY GAMES" kid-with-claw-machine logo (SVG preferred, or swap the `src` in `js/components.js` to `logo.png`). ~260×70 display size. Transparent background. |
-| `images/og-card.png` | All pages (OG/Twitter) | 1200×630 social share card. Logo + tagline + brand colors. |
-| `images/claw-machine.webp` | Home, Games | Photo of a claw machine (ideally one of ours on location). |
-| `images/video-games.webp` | Home, Games | Photo of arcade cabinets. |
-| `images/bulk-vending.webp` | Home, Games | Photo of bulk vending machines. |
-| `images/lrd-tag.svg` | Footer | Built-by-LRD tag — copy from `ssnwa-site/images/lrd-tag.svg`. |
+| File(s) | Used on |
+|---|---|
+| `logo-horizontal-256/512/768.{png,webp}` | Header + footer (`<site-header>`, `<site-footer>` in `js/components.js`) |
+| `logo-512/1024.{png,webp}` | Hero mascot on `index.html` and `about.html` |
+| `logo-128/256.{png,webp}`, `logo.{png,webp}` | Source masters / smaller variants (kept for future use) |
+| `og-card.{png,webp}` | OG / Twitter card on every page |
+| `claw-product-cut.{png,webp}` | `how-it-works.html` hero, game cards on `index.html` + `games.html` |
+| `arcade-product-cut.{png,webp}` | `games.html` hero, game cards on `index.html` + `games.html` |
+| `vending-product-cut.{png,webp}` | `venues.html` hero, game cards on `index.html` + `games.html` |
+| `contact-hero-512/1024.{png,webp}` | `contact.html` hero |
+| `nwa-map-512/1024.{png,webp}` | `locations.html` hero |
+| `lrd-tag.svg` | Footer (built-by-LRD tag) |
 
-## Nice-to-have (not yet referenced)
+PWA icons and favicon live at the repo root (`/favicon.ico`, `/icon-192.png`, `/icon-512.png`), not here.
 
-- `images/hero-bg.webp` — Colorful arcade floor shot for the hero section
-- `images/venue-*.webp` — Photos of actual partner venues for the Venues page
-- `images/map-nwa.svg` — NWA service area map illustration for the Locations page
+## Source / archive
 
-## Notes
+Uncropped originals of the product cut-outs — keep as the source of truth in case the crops ever need to be redone.
 
-- Use WebP for photos (smaller than JPG, broad support)
-- Use SVG for logos and icons when possible
-- Keep file sizes under 200KB where possible — this site is fast, let's keep it that way
+- `arcade-product.{png,webp}`
+- `claw-product.{png,webp}`
+- `vending-product.{png,webp}`
+
+## Conventions
+
+- Use WebP for photos; keep PNG as the fallback.
+- Keep individual files under ~200KB where possible.
+- When adding a new hero or card image, follow the existing pattern: export `-512` and `-1024` WebP + PNG variants and wire them up with `<picture>` + `srcset`.
