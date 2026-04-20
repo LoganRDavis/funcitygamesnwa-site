@@ -1,0 +1,47 @@
+# Cloudflare Pages headers
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Cross-Origin-Opener-Policy: same-origin
+  Permissions-Policy: accelerometer=(), autoplay=(), browsing-topics=(), camera=(), geolocation=(), gyroscope=(), interest-cohort=(), magnetometer=(), microphone=(), payment=(), usb=()
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self' mailto:; frame-ancestors 'self'; base-uri 'self'; manifest-src 'self'; object-src 'none'; upgrade-insecure-requests
+
+# Immutable: stable filenames or explicit cache-busting (CSS uses ?v=…)
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+# Moderate: images change with brand refreshes; no filename fingerprinting
+/images/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Short: JS is not cache-busted; safer to revalidate daily
+/js/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=3600
+
+/favicon.ico
+  Cache-Control: public, max-age=604800
+
+/icon-192.png
+  Cache-Control: public, max-age=604800
+
+/icon-512.png
+  Cache-Control: public, max-age=604800
+
+/site.webmanifest
+  Cache-Control: public, max-age=604800
+  Content-Type: application/manifest+json
+
+# HTML: revalidate on every request so deploys go live immediately
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

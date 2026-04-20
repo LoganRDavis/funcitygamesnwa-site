@@ -14,7 +14,8 @@
 	<meta property="og:title" content="Fun City Games | Arcade Route Partner in Northwest Arkansas">
 	<meta property="og:description"
 		content="We place arcade and amusement machines in your business at zero cost and split the profits. Serving Fayetteville, Rogers, Bentonville, and Springdale.">
-	<meta property="og:image" content="https://www.funcitygamesnwa.com/images/og-card.png">
+	<meta property="og:image" content="https://www.funcitygamesnwa.com/images/og-card.webp">
+	<meta property="og:image:type" content="image/webp">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="630">
 
@@ -24,16 +25,15 @@
 	<meta name="twitter:title" content="Fun City Games | Arcade Route Partner in Northwest Arkansas">
 	<meta name="twitter:description"
 		content="We place arcade and amusement machines in your business at zero cost and split the profits.">
-	<meta name="twitter:image" content="https://www.funcitygamesnwa.com/images/og-card.png">
+	<meta name="twitter:image" content="https://www.funcitygamesnwa.com/images/og-card.webp">
 
 	<link rel="canonical" href="https://www.funcitygamesnwa.com/">
 	<link rel="icon" href="/favicon.ico" sizes="any">
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="apple-touch-icon" href="/icon-192.png">
 	<link rel="preload" as="font" href="/fonts/open-sans-latin.woff2" type="font/woff2" crossorigin>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap">
+	<link rel="preload" as="font" href="/fonts/fredoka-latin.woff2" type="font/woff2" crossorigin>
+	<link rel="preload" as="image" imagesrcset="/images/logo-512.webp 1x, /images/logo-1024.webp 2x" type="image/webp" fetchpriority="high">
 	<link rel="stylesheet" href="/css/main.css?v=20260420a">
 	<script src="/js/components.js" defer></script>
 
@@ -45,8 +45,8 @@
 		"name": "Fun City Games",
 		"description": "Arcade game route operator serving Northwest Arkansas. We place, service, and profit-share arcade, claw, and bulk vending machines with local businesses at zero cost.",
 		"url": "https://www.funcitygamesnwa.com",
-		"logo": "https://www.funcitygamesnwa.com/images/logo-horizontal-512.png",
-		"image": "https://www.funcitygamesnwa.com/images/og-card.png",
+		"logo": "https://www.funcitygamesnwa.com/images/logo-horizontal-512.webp",
+		"image": "https://www.funcitygamesnwa.com/images/og-card.webp",
 		"telephone": "+18776242637",
 		"email": "info@funcitygamesnwa.com",
 		"areaServed": [
@@ -100,7 +100,7 @@
 				<div class="hero-product">
 					<picture>
 						<source type="image/webp" srcset="/images/logo-512.webp 1x, /images/logo-1024.webp 2x">
-						<img src="/images/logo-512.png" srcset="/images/logo-512.png 1x, /images/logo-1024.png 2x" alt="Fun City Games mascot and claw machine emblem" width="512" height="519">
+						<img src="/images/logo-512.png" srcset="/images/logo-512.png 1x, /images/logo-1024.png 2x" alt="Fun City Games mascot and claw machine emblem" width="512" height="519" fetchpriority="high" decoding="async">
 					</picture>
 				</div>
 			</section>
@@ -253,7 +253,7 @@
 					<div class="game-cards game-cards-tilt">
 						<article class="game-card">
 							<span class="card-badge card-badge-magenta" aria-hidden="true">Crowd Fave</span>
-							<div class="game-card-image" style="background-image:url('/images/claw-product-cut.png');" role="img" aria-label="Claw machine"></div>
+							<div class="game-card-image" style="background-image:url('/images/claw-product-cut.webp');" role="img" aria-label="Claw machine"></div>
 							<div class="game-card-body">
 								<h3>Claw Machines</h3>
 								<p>The newest licensed plush — proven crowd-pleasers.</p>
@@ -261,7 +261,7 @@
 						</article>
 						<article class="game-card">
 							<span class="card-badge card-badge-yellow" aria-hidden="true">Hot!</span>
-							<div class="game-card-image" style="background-image:url('/images/arcade-product-cut.png');" role="img" aria-label="Video arcade games"></div>
+							<div class="game-card-image" style="background-image:url('/images/arcade-product-cut.webp');" role="img" aria-label="Video arcade games"></div>
 							<div class="game-card-body">
 								<h3>Video Arcade</h3>
 								<p>Classics and new hits in cabinets that keep guests playing.</p>
@@ -269,7 +269,7 @@
 						</article>
 						<article class="game-card">
 							<span class="card-badge card-badge-cyan" aria-hidden="true">Kid Magnet</span>
-							<div class="game-card-image" style="background-image:url('/images/vending-product-cut.png');" role="img" aria-label="Bulk vending machines"></div>
+							<div class="game-card-image" style="background-image:url('/images/vending-product-cut.webp');" role="img" aria-label="Bulk vending machines"></div>
 							<div class="game-card-body">
 								<h3>Bulk Vending</h3>
 								<p>Small footprint. Steady daily revenue. Instant kid magnet.</p>
@@ -354,8 +354,10 @@
 				<h2>Ready to Partner? Let's Chat.</h2>
 				<p>Most partnerships start with a 10-minute phone call. No pressure, no sales pitch.</p>
 				<form class="cta-form" action="/contact.html" method="get">
-					<input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required>
-					<input type="text" name="business" placeholder="Business Name" aria-label="Business Name" required>
+					<label for="cta-name" class="visually-hidden">Your Name</label>
+					<input id="cta-name" type="text" name="name" placeholder="Your Name" autocomplete="name" required>
+					<label for="cta-business" class="visually-hidden">Business Name</label>
+					<input id="cta-business" type="text" name="business" placeholder="Business Name" autocomplete="organization" required>
 					<button type="submit" class="btn btn-magenta">Submit Inquiry</button>
 				</form>
 			</section>

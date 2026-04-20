@@ -14,7 +14,8 @@
 	<meta property="og:title" content="How It Works | Fun City Games">
 	<meta property="og:description"
 		content="We place arcade machines at zero cost, service them, and share the profits. Here's exactly how the partnership works.">
-	<meta property="og:image" content="https://www.funcitygamesnwa.com/images/og-card.png">
+	<meta property="og:image" content="https://www.funcitygamesnwa.com/images/og-card.webp">
+	<meta property="og:image:type" content="image/webp">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="630">
 
@@ -24,18 +25,66 @@
 	<meta name="twitter:title" content="How It Works | Fun City Games">
 	<meta name="twitter:description"
 		content="We place arcade machines at zero cost, service them, and share the profits.">
-	<meta name="twitter:image" content="https://www.funcitygamesnwa.com/images/og-card.png">
+	<meta name="twitter:image" content="https://www.funcitygamesnwa.com/images/og-card.webp">
 
 	<link rel="canonical" href="https://www.funcitygamesnwa.com/how-it-works.html">
 	<link rel="icon" href="/favicon.ico" sizes="any">
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="apple-touch-icon" href="/icon-192.png">
 	<link rel="preload" as="font" href="/fonts/open-sans-latin.woff2" type="font/woff2" crossorigin>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap">
+	<link rel="preload" as="font" href="/fonts/fredoka-latin.woff2" type="font/woff2" crossorigin>
+	<link rel="preload" as="image" href="/images/claw-product-cut.webp" type="image/webp" fetchpriority="high">
 	<link rel="stylesheet" href="/css/main.css?v=20260420a">
 	<script src="/js/components.js" defer></script>
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": [
+			{
+				"@type": "Question",
+				"name": "How much space do I need?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "As little as a single claw machine footprint (about 3×3 feet) up to a full arcade corner. We'll recommend a lineup that fits your space and traffic."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "Do I pay anything upfront?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Never. We cover equipment, delivery, installation, prizes, service, repairs, and insurance. You just provide the outlet and the square footage."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "What's the profit split?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "It varies by machine type and location, but it's always transparent and agreed upfront. We'll walk you through exact numbers during our free consultation."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "What if a game isn't making money?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "We swap it. Plain and simple. We want every machine on our route earning — our incentives are aligned with yours."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "Am I locked in?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "No. If it's not working for your business, we pick the games up. We'd rather keep earning partners than force bad fits."
+				}
+			}
+		]
+	}
+	</script>
 </head>
 
 <body class="theme-modern">
@@ -78,7 +127,7 @@
 				<div class="hero-product">
 					<picture>
 						<source type="image/webp" srcset="/images/claw-product-cut.webp">
-						<img src="/images/claw-product-cut.png" alt="Fun City Games claw machine ready for placement" width="512" height="519">
+						<img src="/images/claw-product-cut.png" alt="Fun City Games claw machine ready for placement" width="512" height="519" fetchpriority="high" decoding="async">
 					</picture>
 				</div>
 			</section>

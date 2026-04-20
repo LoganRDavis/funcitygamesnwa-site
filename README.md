@@ -6,4 +6,4 @@ https://www.funcitygamesnwa.com
 ## Development
 
 - `make serve` — Local dev server at http://localhost:8000
-- Pushing to `master` deploys automatically via Cloudflare Pages
+- Pushing to `main` deploys automatically via Cloudflare Pages

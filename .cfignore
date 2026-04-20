@@ -1,8 +1,11 @@
 .git
+.gitignore
+.cfignore
 .vscode
 .claude
 .devcontainer
 .mcp.json
+.playwright-mcp
 README.md
 CLAUDE.md
 Makefile
