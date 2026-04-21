@@ -8,7 +8,7 @@ Static marketing site for Fun City Games — an arcade game route operator partn
 
 ## Commands
 
-- `make serve` — Local dev server at http://localhost:8000 (Python's built-in `http.server`).
+- `make serve` — Local dev server at http://localhost:8000. Runs `serve.py`, a thin wrapper around Python's `http.server` that mimics Cloudflare Pages' `.html` behavior: serves `/foo` from `/foo.html` and 308-redirects `/foo.html` → `/foo`. Keep that parity if you touch `serve.py` — the whole site relies on extensionless canonicals and local dev must match prod.
 - Pushing to `main` deploys automatically via Cloudflare Pages.
 
 ## Architecture

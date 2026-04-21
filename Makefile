@@ -1,2 +1,2 @@
 serve:
-	python3 -m http.server 8000
+	python3 serve.py 8000
