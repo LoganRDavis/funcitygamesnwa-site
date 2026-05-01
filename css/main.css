@@ -966,7 +966,7 @@ main { flex-grow: 1; }
   box-shadow: var(--sh-stick-lg);
 }
 
-.contact-info h2 { color: var(--white); margin-top: 0; }
+body.theme-modern .contact-info h2 { color: var(--white); margin-top: 0; }
 
 .contact-info a { color: var(--yellow); }
 .contact-info a:hover { color: var(--white); }
@@ -1661,6 +1661,11 @@ body.theme-modern .game-card-image::before {
 
 body.theme-modern .game-card:nth-child(2) .game-card-image {
   background-color: var(--purple);
+}
+
+/* Portrait product cuts (e.g. jukebox) — size by height so the tall image
+   fits inside the 4:3 card frame instead of overflowing the box. */
+body.theme-modern .game-card-image-tall {
   background-size: auto 92%;
   background-position: center;
 }

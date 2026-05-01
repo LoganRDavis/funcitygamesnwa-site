@@ -1,7 +1,7 @@
 {
-	"short_name": "Fun City Games",
+	"short_name": "Fun City",
 	"name": "Fun City Games NWA",
-	"description": "Arcade game route partner in Northwest Arkansas. We place, service, and share profits on arcade games for your business.",
+	"description": "Arcade route partner across NWA, Fort Smith, and Eastern Oklahoma. We place, service, and share profits on arcade games for your business.",
 	"scope": "/",
 	"start_url": "/",
 	"display": "standalone",

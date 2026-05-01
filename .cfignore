@@ -15,6 +15,7 @@ Gemini_Generated_Image_*.png
 
 # Image source archives — kept in the repo as masters but not needed in prod.
 # See images/README.md "Source / archive" section.
+images/README.md
 images/logo.png
 images/logo.webp
 images/logo-128.png

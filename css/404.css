@@ -20,7 +20,7 @@ body {
 ._404 {
   font-size: clamp(6rem, 20vw, 11rem);
   font-weight: 900;
-  color: #FFD21F;
+  color: #FFD447;
   line-height: 1;
   letter-spacing: -0.02em;
   text-shadow: 6px 6px 0 #FF0F8A;
@@ -29,7 +29,7 @@ body {
 
 hr {
   border: 0;
-  border-top: 3px solid #1EC8E6;
+  border-top: 3px solid #17CFEB;
   margin: 20px auto;
   width: 80px;
 }
@@ -52,7 +52,7 @@ hr {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #141420;
-  background: #FFD21F;
+  background: #FFD447;
   border: 3px solid #141420;
   border-radius: 999px;
   box-shadow: 0 5px 0 #141420;

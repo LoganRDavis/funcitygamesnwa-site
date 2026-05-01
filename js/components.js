@@ -121,7 +121,7 @@ class SiteFooter extends HTMLElement {
 								<img src="/images/logo-horizontal-256.png" srcset="/images/logo-horizontal-256.png 1x, /images/logo-horizontal-512.png 2x" alt="Fun City Games" width="180" height="90" loading="lazy" decoding="async">
 							</picture>
 						</a>
-						<p>Arcade game route partner serving Northwest Arkansas at zero cost to your business.</p>
+						<p>Arcade game route partner serving Northwest Arkansas, the Fort Smith area, and Eastern Oklahoma at zero cost to your business.</p>
 					</div>
 					<div class="footer-col">
 						<h4>Explore</h4>
@@ -144,16 +144,16 @@ class SiteFooter extends HTMLElement {
 					<div class="footer-col">
 						<h4>Service Areas</h4>
 						<ul>
-							<li>Fayetteville, AR</li>
-							<li>Rogers, AR</li>
-							<li>Bentonville, AR</li>
-							<li>Springdale, AR</li>
+							<li>Northwest Arkansas</li>
+							<li>Fort Smith / River Valley</li>
+							<li>Eastern Oklahoma</li>
+							<li><a href="/locations">See all cities</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="footer-bottom">
 					<div>&copy; ${year} Fun City Games. All rights reserved.</div>
-					<a href="https://www.loganrdavis.com" rel="noopener noreferrer" aria-label="Built by Logan R. Davis">
+					<a href="https://www.loganrdavis.com" target="_blank" rel="noopener noreferrer" aria-label="Built by Logan R. Davis">
 						<img src="/images/lrd-tag.svg" alt="www.loganrdavis.com" width="150" height="75" loading="lazy" decoding="async">
 					</a>
 				</div>
