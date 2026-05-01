@@ -1245,9 +1245,25 @@ body.theme-modern .wave { display: none !important; }
 body.theme-modern .section { padding: 110px 20px; background: var(--bg); color: var(--text); }
 
 body.theme-modern .section-cream,
-body.theme-modern .section-white,
 body.theme-modern .section-yellow,
 body.theme-modern .section-magenta-light { background: var(--bg); color: var(--text); }
+
+/* Perfect For Your Business — warm cream stage with brand-color radial
+   glows in each corner and a hard ink rule on top to break from the
+   yellow games section above. The magenta band below is its own hard
+   color jump, so no bottom rule needed. */
+body.theme-modern .section-venues {
+  padding-top: 88px;
+  padding-bottom: 88px;
+  background:
+    radial-gradient(720px 480px at 0% 0%, rgba(255, 196, 0, 0.32), transparent 62%),
+    radial-gradient(820px 560px at 100% 0%, rgba(0, 182, 230, 0.24), transparent 65%),
+    radial-gradient(680px 460px at 100% 100%, rgba(255, 15, 138, 0.22), transparent 62%),
+    radial-gradient(640px 440px at 0% 100%, rgba(0, 200, 150, 0.18), transparent 60%),
+    var(--bg);
+  color: var(--text);
+  border-top: 3px solid var(--ink);
+}
 
 /* Why Partner — full bright cyan band */
 body.theme-modern .section-cyan,
@@ -1644,15 +1660,17 @@ body.theme-modern .game-card-image::before {
 }
 
 body.theme-modern .game-card:nth-child(2) .game-card-image {
-  background-color: var(--accent-cyan);
+  background-color: var(--purple);
+  background-size: auto 92%;
+  background-position: center;
 }
 
 body.theme-modern .game-card:nth-child(3) .game-card-image {
-  background-color: var(--accent-yellow);
+  background-color: var(--accent-cyan);
 }
 
 body.theme-modern .game-card:nth-child(4) .game-card-image {
-  background-color: var(--purple);
+  background-color: var(--accent-yellow);
 }
 
 body.theme-modern .game-card:nth-child(5) .game-card-image {
@@ -1671,9 +1689,9 @@ body.theme-modern .game-card h3 {
   margin-bottom: 8px;
 }
 
-body.theme-modern .game-card:nth-child(2) h3 { color: #0A9FC6 !important; }
-body.theme-modern .game-card:nth-child(3) h3 { color: #B97A00 !important; }
-body.theme-modern .game-card:nth-child(4) h3 { color: var(--purple-dark) !important; }
+body.theme-modern .game-card:nth-child(2) h3 { color: var(--purple-dark) !important; }
+body.theme-modern .game-card:nth-child(3) h3 { color: #0A9FC6 !important; }
+body.theme-modern .game-card:nth-child(4) h3 { color: #B97A00 !important; }
 body.theme-modern .game-card:nth-child(5) h3 { color: #007E5E !important; }
 
 body.theme-modern .game-card p {
@@ -2070,6 +2088,163 @@ body.theme-modern .section-yellow.section-textured::before {
   background-image: radial-gradient(rgba(15, 20, 41, 0.10) 1.5px, transparent 1.8px);
   mix-blend-mode: normal;
 }
+body.theme-modern .section-venues.section-textured::before {
+  background-image: radial-gradient(rgba(15, 20, 41, 0.10) 1.5px, transparent 1.8px);
+  mix-blend-mode: normal;
+  opacity: 0.65;
+}
+
+/* Extra section stickers used on the venues section */
+body.theme-modern .section-sticker-burst-2 { top: 8%; right: 5%; width: 52px; height: 52px; color: var(--accent-cyan); animation: spin-slow 14s linear infinite; }
+body.theme-modern .section-sticker-star-3 { bottom: 8%; left: 5%; width: 50px; height: 50px; color: var(--accent-yellow); transform: rotate(-10deg); animation: sparkle-pop 5.4s ease-in-out infinite 0.2s; }
+body.theme-modern .section-sticker-zigzag-3 { top: 46%; left: 3%; width: 92px; height: 36px; color: var(--accent-magenta); transform: rotate(-8deg); opacity: 0.78; }
+body.theme-modern .section-sticker-star-4 { top: 18%; right: 14%; width: 36px; height: 36px; color: var(--accent-magenta); transform: rotate(18deg); animation: sparkle-pop 4.6s ease-in-out infinite 0.7s; }
+
+/* Floating ink-bordered orbs — tactile sticker shapes that frame the venue
+   grid. Match the same 3px ink border + hard offset shadow as the cards. */
+body.theme-modern .section-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  border: var(--bd);
+  box-shadow: var(--sh-stick);
+}
+body.theme-modern .section-orb-yellow {
+  width: 96px; height: 96px;
+  background: var(--accent-yellow);
+  top: 10%; left: -34px;
+  transform: rotate(-6deg);
+}
+body.theme-modern .section-orb-cyan {
+  width: 64px; height: 64px;
+  background: var(--accent-cyan);
+  bottom: 18%; right: -22px;
+  transform: rotate(8deg);
+}
+body.theme-modern .section-orb-magenta {
+  width: 44px; height: 44px;
+  background: var(--accent-magenta);
+  bottom: 36%; left: 10%;
+  transform: rotate(4deg);
+}
+
+/* Section eyebrow — small badge above a section title, mirrors hero badge. */
+body.theme-modern .section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--text);
+  color: #fff;
+  font-family: 'Fredoka', 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  padding: 9px 18px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 18px rgba(15, 20, 41, 0.22);
+}
+body.theme-modern .section-eyebrow-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--accent-yellow);
+}
+
+/* Inline sparkle decoration next to a section title (e.g. venues). */
+body.theme-modern .title-sparkle {
+  display: inline-block;
+  width: 0.65em;
+  height: 0.65em;
+  margin-left: 0.35em;
+  color: var(--accent-magenta);
+  transform: rotate(14deg);
+  vertical-align: 0.18em;
+  animation: sparkle-pop 4s ease-in-out infinite 0.3s;
+}
+body.theme-modern .title-sparkle svg { width: 100%; height: 100%; display: block; }
+
+/* Homepage venues — force a clean 3×2 grid (vs auto-fit's 4+2). */
+body.theme-modern .section-venues .venue-grid {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 860px) {
+  body.theme-modern .section-venues .venue-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media screen and (max-width: 540px) {
+  body.theme-modern .section-venues .venue-grid { grid-template-columns: 1fr; }
+}
+
+/* VENUE CARDS — saturated brand palette, sticker shadows, slight tilt.
+   Replaces the legacy pastel tints so the section actually pops. */
+body.theme-modern .venue {
+  background: var(--accent-yellow);
+  color: var(--text);
+  border: var(--bd);
+  border-radius: 22px;
+  padding: 30px 22px 26px;
+  box-shadow: var(--sh-stick);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+body.theme-modern .venue h3 { color: inherit; font-family: 'Fredoka', 'Open Sans', sans-serif; font-weight: 600; font-size: 1.2rem; margin: 14px 0 8px; letter-spacing: -0.01em; }
+body.theme-modern .venue p { color: inherit; opacity: 0.88; font-size: 0.96rem; margin: 0; }
+
+body.theme-modern .venue:nth-child(6n+1) { background: var(--accent-yellow); color: var(--text); transform: rotate(-1.4deg); }
+body.theme-modern .venue:nth-child(6n+2) { background: var(--accent-cyan);   color: #fff;        transform: rotate(1.2deg); }
+body.theme-modern .venue:nth-child(6n+3) { background: var(--accent-magenta); color: #fff;       transform: rotate(-1deg); }
+body.theme-modern .venue:nth-child(6n+4) { background: var(--mint);          color: var(--text); transform: rotate(1.4deg); }
+body.theme-modern .venue:nth-child(6n+5) { background: var(--orange);        color: #fff;        transform: rotate(-1.2deg); }
+body.theme-modern .venue:nth-child(6n+6) { background: var(--purple);        color: #fff;        transform: rotate(1deg); }
+
+@keyframes venue-wobble {
+  0%   { transform: translateY(-6px) rotate(0); }
+  25%  { transform: translateY(-7px) rotate(-2.5deg); }
+  55%  { transform: translateY(-5px) rotate(2deg); }
+  80%  { transform: translateY(-6px) rotate(-1deg); }
+  100% { transform: translateY(-6px) rotate(0); }
+}
+body.theme-modern .venue:hover {
+  animation: venue-wobble 0.5s ease-out forwards;
+  box-shadow: var(--sh-stick-lg);
+}
+
+/* Venue icon — circular sticker with contrasting fill against the card */
+body.theme-modern .venue-icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: var(--bd);
+  box-shadow: var(--sh-btn-stick);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: #fff;
+  color: var(--text);
+}
+
+body.theme-modern .venue:nth-child(6n+1) .venue-icon { background: var(--accent-magenta); color: #fff; }
+body.theme-modern .venue:nth-child(6n+2) .venue-icon { background: var(--accent-yellow); color: var(--text); }
+body.theme-modern .venue:nth-child(6n+3) .venue-icon { background: var(--accent-yellow); color: var(--text); }
+body.theme-modern .venue:nth-child(6n+4) .venue-icon { background: var(--accent-magenta); color: #fff; }
+body.theme-modern .venue:nth-child(6n+5) .venue-icon { background: var(--accent-cyan); color: #fff; }
+body.theme-modern .venue:nth-child(6n+6) .venue-icon { background: var(--accent-yellow); color: var(--text); }
+
+@media screen and (max-width: 720px) {
+  body.theme-modern .venue:nth-child(6n+1),
+  body.theme-modern .venue:nth-child(6n+2),
+  body.theme-modern .venue:nth-child(6n+3),
+  body.theme-modern .venue:nth-child(6n+4),
+  body.theme-modern .venue:nth-child(6n+5),
+  body.theme-modern .venue:nth-child(6n+6) { transform: none; }
+}
 
 /* GAME CARDS — tilt + corner sticker badges */
 body.theme-modern .game-cards-tilt .game-card { position: relative; }
@@ -2136,7 +2311,14 @@ body.theme-modern .cta-sparkle-3 { top: 32%; right: 18%; width: 44px; height: 44
   body.theme-modern .hype-item { font-size: 0.95rem; }
   body.theme-modern .hype-track { gap: 24px; padding-left: 24px; }
   body.theme-modern .section-sticker-zigzag-1,
-  body.theme-modern .section-sticker-zigzag-2 { display: none; }
+  body.theme-modern .section-sticker-zigzag-2,
+  body.theme-modern .section-sticker-zigzag-3,
+  body.theme-modern .section-sticker-burst-2,
+  body.theme-modern .section-sticker-star-3,
+  body.theme-modern .section-sticker-star-4,
+  body.theme-modern .section-orb-yellow,
+  body.theme-modern .section-orb-cyan,
+  body.theme-modern .section-orb-magenta { display: none; }
   body.theme-modern .card-badge { font-size: 0.75rem; padding: 6px 12px; }
 }
 
@@ -2194,6 +2376,17 @@ body.theme-modern .hero-product.hero-scene img {
 }
 @media screen and (max-width: 900px) {
   body.theme-modern .hero-product.hero-scene { max-width: 520px; margin: 0 auto; }
+}
+
+/* HERO PRODUCT — portrait variant for tall product cuts (e.g. jukebox) */
+body.theme-modern .hero-product.hero-product-tall {
+  max-width: 180px;
+}
+@media screen and (max-width: 900px) {
+  body.theme-modern .hero-product.hero-product-tall { max-width: 170px; }
+}
+@media screen and (max-width: 720px) {
+  body.theme-modern .hero-product.hero-product-tall { max-width: 150px; }
 }
 
 /* Icon-only game card image — used when no product photo exists yet */

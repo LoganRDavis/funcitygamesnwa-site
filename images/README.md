@@ -11,7 +11,7 @@ Catalog of what lives in this folder. Most raster images are shipped as a `.png`
 | `og-card.{png,webp}` | OG / Twitter card on every page |
 | `claw-product-cut.{png,webp}` | `how-it-works.html` hero, game cards on `index.html` + `games.html` |
 | `arcade-product-cut.{png,webp}` | `games.html` hero, game cards on `index.html` + `games.html` |
-| `jukebox-product-cut.{png,webp}` | Game cards on `index.html` + `games.html` |
+| `jukebox-product-cut.{png,webp}` | `games.html` hero, game cards on `index.html` + `games.html` |
 | `redemption-product-cut.{png,webp}` | Game card on `games.html` |
 | `pool-product-cut.{png,webp}` | Game card on `games.html` |
 | `vending-product-cut.{png,webp}` | Game card on `games.html` |
@@ -29,6 +29,7 @@ Kept in the repo as masters but excluded from the Cloudflare deploy via `.cfigno
 - `logo.{png,webp}`, `logo-128.{png,webp}`, `logo-256.{png,webp}` — full-size logo + smaller mascot variants
 - `arcade-product.{png,webp}` — uncropped arcade cabinet
 - `claw-product.{png,webp}` — uncropped claw machine
+- `jukebox-product.{png,webp}` — uncropped TouchTunes jukebox on chroma-key green (Gemini-generated source)
 - `vending-product.{png,webp}` — uncropped vending tower
 
 ## Conventions

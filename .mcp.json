@@ -2,7 +2,7 @@
   "mcpServers": {
     "playwright": {
       "command": "npx",
-      "args": ["@playwright/mcp@latest", "--output-dir", ".playwright-mcp", "--config", ".playwright-mcp.config.json", "--headless"]
+      "args": ["@playwright/mcp@latest", "--output-dir", ".playwright-mcp", "--config", ".playwright-mcp.config.json", "--headless", "--no-sandbox"]
     }
   }
 }
