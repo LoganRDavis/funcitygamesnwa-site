@@ -27,4 +27,29 @@ curl -fsSL https://claude.ai/install.sh | bash
 echo "Installing Playwright Chromium..."
 npx --yes playwright install --with-deps chromium
 
+# Generate the Playwright MCP config. On Linux ARM64 (and anywhere Google Chrome
+# isn't installed) @playwright/mcp defaults to /opt/google/chrome/chrome and
+# fails; there's no --browser chromium CLI value and --executable-path is
+# ignored (microsoft/playwright-mcp#976), so the only supported way to point
+# at the bundled chromium is a config file with browser.launchOptions.executablePath
+# (see https://playwright.dev/mcp/configuration/options). The chromium directory
+# name includes a version suffix that drifts, so resolve it at install time.
+echo "Writing Playwright MCP config..."
+CHROME_PATH="$(ls -d "$HOME"/.cache/ms-playwright/chromium-*/chrome-linux/chrome 2>/dev/null | tail -1)"
+if [ -n "$CHROME_PATH" ]; then
+  cat > /workspaces/funcitygamesnwa-site/.playwright-mcp.config.json <<EOF
+{
+  "browser": {
+    "browserName": "chromium",
+    "launchOptions": {
+      "executablePath": "$CHROME_PATH"
+    }
+  }
+}
+EOF
+  echo "  -> $CHROME_PATH"
+else
+  echo "  (skipped: no chromium binary found under \$HOME/.cache/ms-playwright)"
+fi
+
 echo "Done."

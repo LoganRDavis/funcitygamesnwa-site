@@ -6,8 +6,24 @@
 .devcontainer
 .mcp.json
 .playwright-mcp
+.playwright-mcp.config.json
 README.md
 CLAUDE.md
 Makefile
 serve.py
 Gemini_Generated_Image_*.png
+
+# Image source archives — kept in the repo as masters but not needed in prod.
+# See images/README.md "Source / archive" section.
+images/logo.png
+images/logo.webp
+images/logo-128.png
+images/logo-128.webp
+images/logo-256.png
+images/logo-256.webp
+images/arcade-product.png
+images/arcade-product.webp
+images/claw-product.png
+images/claw-product.webp
+images/vending-product.png
+images/vending-product.webp

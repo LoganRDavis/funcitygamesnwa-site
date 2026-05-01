@@ -1651,6 +1651,14 @@ body.theme-modern .game-card:nth-child(3) .game-card-image {
   background-color: var(--accent-yellow);
 }
 
+body.theme-modern .game-card:nth-child(4) .game-card-image {
+  background-color: var(--purple);
+}
+
+body.theme-modern .game-card:nth-child(5) .game-card-image {
+  background-color: var(--mint);
+}
+
 body.theme-modern .game-card-image::after { content: none; }
 
 body.theme-modern .game-card-body { padding: 26px 28px 30px; }
@@ -1665,6 +1673,8 @@ body.theme-modern .game-card h3 {
 
 body.theme-modern .game-card:nth-child(2) h3 { color: #0A9FC6 !important; }
 body.theme-modern .game-card:nth-child(3) h3 { color: #B97A00 !important; }
+body.theme-modern .game-card:nth-child(4) h3 { color: var(--purple-dark) !important; }
+body.theme-modern .game-card:nth-child(5) h3 { color: #007E5E !important; }
 
 body.theme-modern .game-card p {
   color: var(--text);
@@ -2066,6 +2076,8 @@ body.theme-modern .game-cards-tilt .game-card { position: relative; }
 body.theme-modern .game-cards-tilt .game-card:nth-of-type(1) { transform: rotate(-1.8deg) !important; }
 body.theme-modern .game-cards-tilt .game-card:nth-of-type(2) { transform: rotate(1.4deg) translateY(18px) !important; }
 body.theme-modern .game-cards-tilt .game-card:nth-of-type(3) { transform: rotate(-1.2deg) !important; }
+body.theme-modern .game-cards-tilt .game-card:nth-of-type(4) { transform: rotate(1.6deg) translateY(12px) !important; }
+body.theme-modern .game-cards-tilt .game-card:nth-of-type(5) { transform: rotate(-1.5deg) !important; }
 body.theme-modern .game-cards-tilt .game-card:hover {
   transform: translateY(-6px) rotate(0) !important;
   box-shadow: var(--shadow-pop);
@@ -2074,7 +2086,9 @@ body.theme-modern .game-cards-tilt .game-card:hover {
 @media screen and (max-width: 900px) {
   body.theme-modern .game-cards-tilt .game-card:nth-of-type(1),
   body.theme-modern .game-cards-tilt .game-card:nth-of-type(2),
-  body.theme-modern .game-cards-tilt .game-card:nth-of-type(3) {
+  body.theme-modern .game-cards-tilt .game-card:nth-of-type(3),
+  body.theme-modern .game-cards-tilt .game-card:nth-of-type(4),
+  body.theme-modern .game-cards-tilt .game-card:nth-of-type(5) {
     transform: none !important;
   }
 }
@@ -2181,6 +2195,25 @@ body.theme-modern .hero-product.hero-scene img {
 @media screen and (max-width: 900px) {
   body.theme-modern .hero-product.hero-scene { max-width: 520px; margin: 0 auto; }
 }
+
+/* Icon-only game card image — used when no product photo exists yet */
+body.theme-modern .game-card-image--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+body.theme-modern .game-card-image--icon::before { content: none; }
+body.theme-modern .game-card-image--icon svg {
+  width: 54%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 10px 0 rgba(15, 20, 41, 0.16));
+}
+
+/* Extra card-badge color variants for purple / mint cards */
+body.theme-modern .card-badge-purple { background: var(--purple); color: #fff; transform: rotate(-4deg); }
+body.theme-modern .card-badge-mint { background: var(--mint); color: #fff; transform: rotate(6deg); }
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
