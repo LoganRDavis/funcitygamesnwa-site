@@ -1618,7 +1618,7 @@ body.theme-modern .feature p {
   line-height: 1.55;
 }
 
-/* GAME CARDS — placeholder until real photos arrive */
+/* GAME CARDS */
 body.theme-modern .game-cards {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 28px;
