@@ -19,3 +19,26 @@
 
 # Legacy/convenience aliases
 /home /         301
+
+# Direct /404 hits should return a 404 status, not 200. Pages auto-uses
+# 404.html as the SPA fallback for actual misses (correct 404 status); this
+# rule only handles the case where someone visits the bare /404 URL.
+/404           /404.html     404
+
+# Tooling/source files that ship via the Git Integration deploy (.cfignore is
+# only honored by `wrangler pages deploy`, not Git pushes). Serve the 404 page
+# with a 404 status so internal docs and config files aren't publicly fetchable.
+/CLAUDE.md                       /404.html  404
+/README.md                       /404.html  404
+/Makefile                        /404.html  404
+/serve.py                        /404.html  404
+/.cfignore                       /404.html  404
+/.gitignore                      /404.html  404
+/.mcp.json                       /404.html  404
+/.playwright-mcp.config.json     /404.html  404
+/.playwright-mcp/*               /404.html  404
+/.vscode/*                       /404.html  404
+/.claude/*                       /404.html  404
+/.devcontainer/*                 /404.html  404
+/.git/*                          /404.html  404
+/images/README.md                /404.html  404

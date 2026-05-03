@@ -10,7 +10,11 @@
   Cross-Origin-Resource-Policy: same-origin
   Permissions-Policy: accelerometer=(), autoplay=(), browsing-topics=(), camera=(), geolocation=(), gyroscope=(), interest-cohort=(), magnetometer=(), microphone=(), payment=(), usb=()
   Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'self'; base-uri 'self'; manifest-src 'self'; object-src 'none'; upgrade-insecure-requests
-  Cache-Control: public, max-age=0, must-revalidate
+# No Cache-Control on /* — Pages concatenates header values rather than
+# overriding them, so any value here gets merged into the per-path rules
+# below (immutable CSS, long-cache fonts/images) and the strictest directive
+# wins, defeating the cache strategy. Pages already sends a sensible HTML
+# default of `public, max-age=0, must-revalidate` when nothing is set.
 
 # Immutable: stable filenames or explicit cache-busting (CSS uses ?v=…)
 /css/*
