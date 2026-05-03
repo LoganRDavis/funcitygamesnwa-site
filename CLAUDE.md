@@ -16,11 +16,13 @@ Static marketing site for Fun City Games — an arcade game route operator partn
 Each page is a fully self-contained HTML file — there is no template engine. To add a page, copy an existing page (e.g. `about.html`) and update:
 
 1. `<title>`, `<meta name="description">`, OG/Twitter tags, and `<link rel="canonical">`. **Canonicals and all internal `href`s are extensionless** (`/about`, not `/about.html`) — Cloudflare Pages serves `/foo.html` under `/foo` and 308-redirects the `.html` form, so using `.html` URLs in canonicals creates a redirect loop with any reverse rule.
-2. Add the page to `sitemap.xml` with its extensionless URL.
+2. Add the page to `sitemap.xml` with its extensionless URL. **Do not add `<lastmod>`** unless you have a real per-page edit-tracking workflow — static or generation-time dates get ignored by Google and waste the signal.
 3. Add a trailing-slash alias to `_redirects` (`/foo/ → /foo 301`). The extensionless URL is served natively by Pages; do **not** add `/foo → /foo.html` rules (they loop against Pages' built-in `.html` stripping).
 4. If the page should appear in primary nav, add it to `NAV_LINKS` in `js/components.js` using the extensionless href.
 
-`Organization` JSON-LD (with `@id: https://www.funcitygamesnwa.com/#organization` and `areaServed` listing the four NWA cities) lives on `index.html` and `locations.html`. Fun City Games is a service-area business with no public storefront, so we intentionally avoid `LocalBusiness` schema — that type requires a full `address` to qualify for Google rich results. Other pages use page-specific schema (`AboutPage`, `ContactPage`, `ItemList`, `FAQPage`, `Service`) that references the shared Organization via its `@id`. If you add schema to a new page, keep `name`, `url`, `telephone` (`+18776242637`), and `email` consistent.
+**OG/Twitter `image` URLs must point to the `.png` variant of the share card, not `.webp`.** LinkedIn's scraper and several link-unfurl pipelines (older Slack, some iMessage edge cases, WhatsApp) reject WebP and fall back to a no-image card. Set `og:image:type` to `image/png` to match. Each page also needs an `og:image:alt` and `twitter:image:alt`. (The Organization JSON-LD `logo` property may stay WebP — Google's structured-data spec explicitly accepts it there.)
+
+`Organization` JSON-LD (with `@id: https://www.funcitygamesnwa.com/#organization` and `areaServed` listing the served cities — currently NWA, Fort Smith/River Valley, and Eastern Oklahoma) lives on `index.html` and `locations.html`. When the service area changes, update `areaServed` everywhere it appears (grep `areaServed` — it's duplicated across multiple pages) and keep it in sync with `locations.html` content and the footer "Service Areas" list in `js/components.js`. Fun City Games is a service-area business with no public storefront, so we intentionally avoid `LocalBusiness` schema — that type requires a full `address` to qualify for Google rich results. Other pages use page-specific schema (`AboutPage`, `ContactPage`, `ItemList`, `FAQPage`, `Service`) that references the shared Organization via its `@id`. If you add schema to a new page, keep `name`, `url`, `telephone` (`+18776242637`), and `email` consistent.
 
 `404.html` is standalone — it uses `/css/404.css`, not `main.css`, and does not include `<site-header>`/`<site-footer>`. Edit it directly without touching shared chrome.
 
@@ -36,7 +38,7 @@ Each page is a fully self-contained HTML file — there is no template engine. T
 
 ## Deploy
 
-`.cfignore` controls what Cloudflare Pages excludes from the deploy (currently `.git`, `.vscode`, `.claude`, `README.md`, `CLAUDE.md`, `Makefile`). New tooling/config directories that shouldn't ship to prod must be added there.
+`.cfignore` controls what Cloudflare Pages excludes from the deploy. It currently strips git/editor/agent dirs (`.git`, `.vscode`, `.claude`, `.devcontainer`, `.mcp.json`, `.playwright-mcp*`), repo docs and tooling that aren't part of the site (`README.md`, `CLAUDE.md`, `Makefile`, `serve.py`), and image source masters kept in-repo as archives but not needed in prod (see the explicit list at the bottom of `.cfignore`, plus `images/README.md`). New tooling/config directories or local-only files that shouldn't ship to prod must be added there.
 
 `_headers` and `_redirects` are Cloudflare Pages configuration files (path-based, no build step). `_headers` sets a strict CSP (`script-src 'self'` — **no inline scripts or inline event handlers**, so any new JS must be an external file referenced from `/js/`) plus per-path cache policies. `_redirects` is path-only, so the apex→www redirect is configured as a zone-level Redirect Rule in the Cloudflare dashboard, not here.
 
