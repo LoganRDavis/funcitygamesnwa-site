@@ -4,6 +4,10 @@
 # Track Claude Code settings in this repo (overrides global ignore)
 !.claude/settings.local.json
 
+# Claude Code scheduled-task locks (per-session runtime state, not portable)
+.claude/scheduled_tasks.lock
+.claude/*.lock
+
 # Playwright MCP session artifacts (screenshots, console logs, page snapshots)
 .playwright-mcp/
 
