@@ -1572,7 +1572,7 @@ body.theme-modern .feature:hover {
   box-shadow: var(--shadow-card);
 }
 
-body.theme-modern .feature-icon {
+body.theme-modern .feature .feature-icon {
   width: 76px;
   height: 76px;
   background: var(--accent-magenta) !important;
@@ -1837,7 +1837,7 @@ body.theme-modern .icon-sticker {
   color: currentColor;
 }
 
-body.theme-modern .step-icon {
+body.theme-modern .step .step-icon {
   background: var(--accent-yellow) !important;
   color: var(--text);
   width: 92px;
@@ -1875,7 +1875,7 @@ body.theme-modern .steps-path > .step:nth-of-type(3) .step-icon::after {
   box-shadow: 0 4px 10px rgba(255,196,0,0.45);
 }
 
-body.theme-modern .feature-icon {
+body.theme-modern .feature .feature-icon {
   width: 92px;
   height: 92px;
   border-radius: 26px;
@@ -2409,9 +2409,10 @@ body.theme-modern .game-card-image--icon svg {
   filter: drop-shadow(0 10px 0 rgba(15, 20, 41, 0.16));
 }
 
-/* Extra card-badge color variants for purple / mint cards */
+/* Extra card-badge color variants for purple / mint / orange cards */
 body.theme-modern .card-badge-purple { background: var(--purple); color: #fff; transform: rotate(-4deg); }
 body.theme-modern .card-badge-mint { background: var(--mint); color: #fff; transform: rotate(6deg); }
+body.theme-modern .card-badge-orange { background: var(--orange); color: #fff; transform: rotate(-5deg); }
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
