@@ -10,6 +10,7 @@ Static marketing site for Fun City Games — an arcade game route operator partn
 
 - `make serve` — Local dev server at http://localhost:8000. Runs `serve.py`, a thin wrapper around Python's `http.server` that mimics Cloudflare Pages' `.html` behavior: serves `/foo` from `/foo.html` and 308-redirects `/foo.html` → `/foo`. Keep that parity if you touch `serve.py` — the whole site relies on extensionless canonicals and local dev must match prod.
 - Pushing to `main` deploys automatically via Cloudflare Pages.
+- **Playwright MCP screenshots:** the `--output-dir .playwright-mcp` flag in `.mcp.json` is only honored when `filename` is omitted (the auto-named `page-{timestamp}.png` lands there correctly). Passing a bare relative `filename` writes to **repo root** instead and slips past the `/desktop-*.png` / `/mobile-*.png` gitignore patterns. Either omit `filename` or prefix it explicitly: `".playwright-mcp/<name>.png"`.
 
 ## Architecture
 
